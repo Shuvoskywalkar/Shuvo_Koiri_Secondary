@@ -364,7 +364,7 @@ left: -60px;}
     margin: 0;
 }
 
-
+/* .wrap { border-right: 0.08em solid #666 } */
 .home-section .home-text h2{
     font-size: 55px;
     font-weight: 700;
@@ -377,6 +377,7 @@ left: -60px;}
     color: var(--text-black-700);
     margin: 0;
     text-transform: capitalize;
+    /* border-right: 0.08em solid #666  */
 }
 
 
