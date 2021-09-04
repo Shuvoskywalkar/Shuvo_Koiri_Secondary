@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="utf-8">
+  <title>Skydev01</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="img/shuvo.png" type="image/x-icon">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <!-- main css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <link rel="stylesheet" type="text/css" href="css/style-switcher.css">
+
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-1.css" title="color-1" disabled>
+<link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-2.css" title="color-2" disabled>
+<link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-3.css" title="color-3" disabled>
+<link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-4.css" title="color-4" disabled>
+<link rel="stylesheet" type="text/css" class="alternate-style" href="css/skins/color-5.css" title="color-5" disabled>
+
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<script src="js/firebaseConfig.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyD3P-2FdnNMiYH9ZDdBPRAQIkTLzhcgeMo",
+    authDomain: "shuvokoiri-23703.firebaseapp.com",
+    projectId: "shuvokoiri-23703",
+    storageBucket: "shuvokoiri-23703.appspot.com",
+    messagingSenderId: "787036735832",
+    appId: "1:787036735832:web:4c102af46b54dbdf133d2d"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  console.log(app)
+</script>
+
+</head>
+<body>
+<div class="preloader">
+  <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!--Header.start -->
+  <header class="header">
+    <div class="container">
+      <div class="Row content-between ">
+        <div class="logo ">
+  <a class="text-decoration-none text-center" href="index.html">S</a>
+        </div>
+        <div class="hamburger-btn outer-shadow hover-in-shadow">
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+            <span class="d-flex justify-content-center align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </span>
+          <!-- </button> -->
+                </div>
+      </div>
+    </div>
+  </header>
+<!--Header.end -->
+
+<!--navbar.start-->
+<nav class="nav-menu">
+  <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+  <div class="nav-menu-inner">
+    <ul>
+      <li><a href="#Home" class="inner-shadow link-item text-decoration-none active">Home</a></li>
+      <li><a href="#About" class="outer-shadow link-item hover-in-shadow text-decoration-none">About</a></li>
+      <li><a href="#Services" class="outer-shadow link-item hover-in-shadow text-decoration-none">Services</a></li>
+      <li><a href="#Portfolio" class="outer-shadow link-item hover-in-shadow text-decoration-none">Portfolio</a></li>
+      <li><a href="#Testimonial" class="outer-shadow link-item hover-in-shadow text-decoration-none">Testimonial</a></li>
+      <li><a href="#Contact" class="outer-shadow link-item hover-in-shadow text-decoration-none">Contact</a></li>
+
+    </ul>
+  </div>
+  <p class="copyright-text">&copy;2020 The webshala</p>
+  
+</nav>
+<div class="fade-out-effect"></div>
+<!--navbar.end-->
+
+<!--Home.start-->
+<section>
+<div class="home-section section active" id="Home">
+  <div class="effect-wrap">
+    <div class="effect effect-1"></div>
+    <div class="effect effect-2">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div> <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    
+    </div>
+<div class="effect effect-3"></div>
+<div class="effect effect-4"></div>
+<div class="effect effect-5">
+  <div></div><div></div><div></div><div></div><div></div><div></div><div></div> <div></div><div></div><div></div>
+</div>
+
+  </div>
+  <div class="container">
+    <div class="row d-flex align-items-center justify-content-center full-screen">
+      <div class="home-text col-md-6">
+        <p>Hello</p>
+        <h2>I'm Shuvo Koiri</h2>
+        <h1>Web Developer & UI Designer</h1>
+        <a href="#About" class="text-decoration-none link-item outer-shadow hover-in-shadow btn-1">More About Me</a>
+      </div>
+      <div class="home-img col-md-6">
+        <div class="img-box inner-shadow ">
+          <img src="img/cropedbg.png"  height="404px" width="404px"  class="outer-shadow" alt="profile-pic" >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--Home.end-->
+
+<!--About.start-->
+<section class="about-section section mb-5" id="About">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2 data-heading="main info" >About me</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="about-img">
+          <div class="img-box inner-shadow" >
+<img src="img/cropedbg.png" height="400px" class="outer-shadow" alt="profile-pic" >
+            </div>
+
+            <div class="social-links">
+            <a href="#" class="outer-shadow hover-in-shadow">
+             <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#"  class="outer-shadow hover-in-shadow">
+              <i class="fab fa-youtube"></i>
+             </a>
+             <a href="#"  class="outer-shadow hover-in-shadow">
+              <i class="fab fa-instagram"></i>
+             </a>
+             <a href=""  class="outer-shadow hover-in-shadow">
+               <i class="fab fa-linkedin"></i>
+             </a>
+          </div>
+
+            </div>
+        <div class="about-info">
+<p>
+  <span>Hi! My name is Shuvo Koiri.I am a Web-Ui Designer & Developer.</span>
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+  <p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p> 
+  <p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas iusto voluptatum velit!."
+  </p> 
+<a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow text-decoration-none">Download CV</a>
+<a href="#Contact" class="btn-1 outer-shadow link-item hover-in-shadow text-decoration-none">Hire Me</a>
+        </div>
+      </div>
+      
+     <div class="row">
+       <div class="about-tabs">
+         <span class="tab-item outer-shadow active" data-target=".skills">skills</span>
+         <span class="tab-item " data-target=".experience">experience</span>
+         <span class="tab-item " data-target=".education">education</span>
+     </div>
+     </div>
+
+    <div class="row">
+      <div class="skills tab-content active">
+        <div class="row">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between">
+              <p>HTML</p> <span>50%</span>
+              </div>
+            <div class="progress inner-shadow">
+              <div class="progress-bar" style="width: calc(50% - 14px)">
+              <!-- <span class="text-align-center">50%</span> -->
+            </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="d-flex justify-content-between">
+              <p>JavaScript</p> <span>80%</span>
+              </div>
+            <div class="progress inner-shadow">
+              <div class="progress-bar" style="width: calc(20% - 14px)">
+              <!-- <span>20%</span> -->
+            </div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="d-flex justify-content-between">
+            <p>bootstrap</p> <span>80%</span>
+            </div>
+            <div class="progress inner-shadow">
+              <div class="progress-bar" style="width: calc(80% - 14px)">
+              </div>
+            </div>
+          </div>
+    <div class="skill-item">
+      <div class="d-flex justify-content-between">
+        <p>CSS</p> <span>40%</span>
+        </div>
+      <div class="progress inner-shadow">
+        <!-- <span>40%</span> -->
+        <div class="progress-bar" style="width: calc(40% - 14px)">
+        </div>
+      </div>
+    </div> 
+<div class="skill-item">
+  <div class="d-flex justify-content-between">
+    <p>CSS</p> <span>40%</span>
+    </div>
+  <div class="progress inner-shadow">
+    <div class="progress-bar" style="width: calc(85% - 14px)">
+    <!-- <span>85%</span> -->
+  </div>
+  </div>
+</div>
+<div class="skill-item">
+  <div class="d-flex justify-content-between">
+    <p>Node JS</p> <span>85%</span>
+    </div>
+  
+  <div class="progress inner-shadow">
+    <div class="progress-bar" style="width: calc(85% - 14px)">
+    <!-- <span>85%</span> -->
+  </div>
+  </div>
+</div>
+<div class="skill-item">
+  <div class="d-flex justify-content-between">
+    <p class="font-weight-bold">CSS</p> <span class="">60%</span>
+    </div>
+  <div class="progress inner-shadow">
+    <div class="progress-bar" style="width: calc(60% - 14px)">
+    <!-- <span>60%</span> -->
+  </div>
+  </div>
+</div> 
+</div>
+</div>
+</div>
+<!--skills.end-->
+
+<!--experience.start-->
+<div class="row" >
+  <div class="experience tab-content">
+    <div class="row">
+      <div class="timeline">
+        <div class="row">
+
+          <div class="timeline-item">
+            <div class="timeline-item-inner outer-shadow">
+              <i class="fas fa-briefcase icon"></i>
+              <span>oct, 2020 - present</span>
+              <h3>full stack developer</h3>
+              <h4>SkyDevs,Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-item-inner outer-shadow">
+              <i class="fas fa-briefcase icon"></i>
+              <span>apr, 2021 - present</span>
+              <h3>Graphics Designer</h3>
+              <h4>SkyDevs,Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-item-inner outer-shadow">
+              <i class="fas fa-briefcase icon"></i>
+              <span>july, 2021 - present</span>
+              <h3>Web-UI Designer</h3>
+              <h4>SkyDevs,Bangladesh</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--experience.end-->
+
+
+
+<!--education.start-->
+<div class="row">
+  <div class="education tab-content">
+    <div class="row">
+      <div class="timeline">
+        <div class="row">
+
+          <div class="timeline-item">
+            <div class="timeline-item-inner outer-shadow">
+              <i class="fas fa-graduation-cap icon"></i>
+              <span>oct, 2020 - present</span>
+              <h3>full stack developer</h3>
+              <!-- <h4>SkyDevs,Bangladesh</h4> -->
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-item-inner outer-shadow">
+              <i class="fas fa-graduation-cap icon"></i>
+              <span>apr, 2021 - present</span>
+              <h3>Graphics Designer</h3>
+              <!-- <h4>SkyDevs,Bangladesh</h4> -->
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-item-inner outer-shadow">
+              <i class="fas fa-graduation-cap icon"></i>
+              <span>july, 2021 - present</span>
+              <h3>Web-UI Designer</h3>
+              <!-- <h4>SkyDevs,Bangladesh</h4> -->
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--education.end-->
+
+</div>
+</section>
+<!--ServiceSection.start-->
+
+
+<section class="service-section section " id="Services">
+  <!-- <div class="Container"> -->
+    <div class="row">
+      <div class="section-title">
+        <h2 data-heading="Services">What I do</h2>
+      </div>
+    </div>
+    <div class="row">
+    
+      <div class="service-item">
+        <div class="sercice-item-inner outer-shadow">
+        <div class="icon inner-shadow">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>UI/Ux Design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+      </div>
+      </div>
+    
+
+    <div class="service-item">
+      <div class="sercice-item-inner outer-shadow">
+      <div class="icon inner-shadow">
+        <i class="fas fa-palette"></i>
+      </div>
+      <h3>Graphics Design</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+    </div>
+    </div>
+  
+
+  <div class="service-item">
+    <div class="sercice-item-inner outer-shadow">
+    <div class="icon inner-shadow">
+      <i class="fas fa-code"></i>
+    </div>
+    <h3>Clean Design</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+  </div>
+  </div>
+
+<div class="service-item">
+  <div class="sercice-item-inner outer-shadow">
+  <div class="icon inner-shadow">
+    <i class="fas fa-laptop-code"></i>
+  </div>
+  <h3>Responsive Design</h3>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+</div>
+</div>
+
+
+<div class="service-item">
+  <div class="sercice-item-inner outer-shadow">
+  <div class="icon inner-shadow">
+    <i class="fas fa-search"></i>
+  </div>
+  <h3>Responsive Design</h3>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+</div>
+</div>
+
+<div class="service-item">
+  <div class="sercice-item-inner outer-shadow">
+  <div class="icon inner-shadow">
+    <i class="fas fa-bullhorn"></i>
+  </div>
+  <h3>Responsive Design</h3>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+</div>
+</div>
+
+</div>
+<!-- </div> -->
+</section>
+
+
+<!--ServiceSection.end-->
+
+<!--PortfolioSection.start-->
+<section class="portfolio-section section " id="Portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2 data-heading="Portfolio">Latest Works</h2>
+      </div>
+    </div>
+    <!--Portfolio filter.start-->
+<div class="row">
+  <div class="portfolio-filter">
+  <span class="filter-item outer-shadow active" data-target="all">all</span>
+  <span class="filter-item" data-target="web-application">web application</span>
+  <span class="filter-item" data-target="photography">photography</span>
+  <span class="filter-item" data-target="UI-Designs">Ui Designs</span>
+  <span class="filter-item" data-target="e-commerce">E-Commerce</span>
+  <span class="filter-item" data-target="mobile-app">Mobile App</span>
+</div>
+</div>
+<!--Portfolio filter.end-->
+
+<!--Portfolio items.start-->
+<div class="row portfolio-items">
+
+  <div class="portfolio-item" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-1.jpg" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-1/1.png,
+        img/portfolio/large/project-1/2.png,
+        img/portfolio/large/project-1/3.png,
+        img/portfolio/large/project-1/4.png,
+        img/portfolio/large/project-1/5.png,
+        img/portfolio/large/project-1/6.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, we are hiding in italia..la la la lla lla laaaa voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="portfolio-item " data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-2.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-2/1.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adi jupiter urenas kfishf idid baj bji abaksij sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+   <div class="portfolio-item" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-3.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-3/1.png,
+        img/portfolio/large/project-3/2.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="portfolio-item" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-4.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-4/1.png,
+        img/portfolio/large/project-4/2.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="portfolio-item" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-5.jpg" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-5/1.png,
+        img/portfolio/large/project-5/2.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+   <div class="portfolio-item" data-category="UI-Designs"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-6.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-6/1.png,
+        img/portfolio/large/project-6/2.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+   <div class="portfolio-item" data-category="UI-Designs"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-7.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-7/1.png,
+        img/portfolio/large/project-7/2.png"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title">personal portfolio</p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="portfolio-item" data-category="photography"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS " height="210px" src="https://scontent.fdac65-1.fna.fbcdn.net/v/t1.15752-9/240888455_849477089289759_4338377341482843482_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFI_GKxuq2TP7YJyo9qklfkIzTDuBvyHhMjNMO4G_IeE8KZ4pnZnKfITQDljXcpBYEk8jnhCMS_dze_Dg4JaFA_&_nc_ohc=M-Qlf8EfocYAX_Nes3J&_nc_ht=scontent.fdac65-1.fna&oh=e7538ada9a2abe37388f54c3a9ddb866&oe=6154F6D2" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-1/1.png,
+        img/portfolio/large/project-8/2.png,"
+        >
+        <span class="view-project">view project</span>
+      </div>
+      <p class="portfolio-item-title"></p>
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript</li>
+                <li>web - <span><a href="#">www.nakajima.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+ <div class="portfolio-item" data-category="photography"> 
+  <div class="portfolio-item-inner outer-shadow">
+    <div class="porfolio-item-img">
+      <img class="bugS " height="210px" src="img/portfolio/thumb/project-9.jpg" alt="portfolio image"
+      data-screenshots="img/portfolio/large/project-1/1.png,
+      img/portfolio/large/project-8/2.png,"
+      >
+      <span class="view-project">view project</span>
+    </div>
+    <p class="portfolio-item-title"></p>
+    <div class="portfolio-item-details">
+      <div class="row">
+        <div class="description">
+        <h3>Project Brief:</h3>  
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+        </div>
+          <div class="info">
+            <h3>Project info</h3>  
+            <ul>
+              <li>Date - <span>2021</span></li>
+              <li>client - <span></span>xyz</li>
+              <li>tools - <span></span>HTML, CSS, JavaScript</li>
+              <li>web - <span><a href="#">www.nakajima.com</a></span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+<!--Portfolio items.end-->
+  </div>
+</section>
+<!--PortfolioSection.end-->
+
+
+
+
+
+
+
+
+
+<!--PortfolioPopup.start-->
+<div class="pp portfolio-popup">
+
+  <div class="pp-details">
+    <div class="pp-details-inner">
+      <div class="pp-title">
+        <h2>Personal Portfolio</h2>
+        <p>Category - <span class="pp-project-category">Web-Application</span></p>
+      </div>
+      <div class="pp-project-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus inLorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>2021</span></li>
+                <li>client - <span></span>xyz</li>
+                <li>tools - <span></span>HTML, CSS, JavaScript,Bootstrap</li>
+                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="separator"></div>
+  <div class="pp-main">
+    <div class="pp-main-inner">
+      <div class="pp-project-details-btn  outer-shadow hover-in-shadow">Project Details <i class="fas fa-plus"></i></div>
+      <div class="pp-close outer-shadow hover-in-shadow ">&times;</div>
+      <img src="img/portfolio/large/project-2/1.png" alt="img" class="pp-img outer-shadow" >
+    <div class="pp-counter">1 of 6</div>
+    </div>
+    <div class="pp-loader">
+      <div class="loader"></div>
+    </div>
+    <div class="pp-prev"><i class="fas fa-play"></i></div>
+    <div class="pp-next"><i class="fas fa-play"></i></div>
+  </div>
+</div>
+<!--PortfolioPopup.end-->
+
+
+
+
+
+
+
+
+<!--Style switcher.start-->
+<div class="style-switcher outer-shadow">
+  <div class="style-switcher-toggler s-icon hover-in-shadow outer-shadow">
+    <i class="fas fa-cog fa-spin"></i>
+  </div>
+  <div class="day-night s-icon hover-in-shadow outer-shadow">
+    <i class="fas fa-moon"></i>
+  </div>
+  <h4>theme colors</h4>
+  <div class="colors">
+    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+    <span class="color-5" onclick="setActiveStyle('color-5')"></span> 
+</div>
+</div>
+<!--Style switcher.end-->
+
+<!--Testimonial.start-->
+<section class="testimonial-section section " id="Testimonial">
+  <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2 data-heading="testimonial">Client Speak</h2>
+        </div>
+    </div>
+    <div class="row">
+      <div class="testi-box">
+        <div class="testi-slider outer-shadow ">
+        <div class="testi-slider-container ">
+
+          <div class="testi-item active">
+            <i class="fas fa-quote-left left"></i>
+            <i class="fas fa-quote-right right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
+            <img src="img/testimonial/1.png" alt="testimonial">
+            <span>Lasith Malinga</span>
+          </div>
+
+        <div class="testi-item ">
+            <i class="fas fa-quote-left left" ></i>
+            <i class="fas fa-quote-right right"></i>
+            <p>gujar jaye din din din ..ye har pall gin gin gin..kisike hain yaad o main..kisike hay baaton main...jabse chale khwab mere hay ho gye rangiiiin...gujar jaye din din din</p>
+            <img src="img/testimonial/1.png" alt="testimonial">
+            <span>Kumara Sangakara</span>
+          </div> 
+              <div class="testi-item">
+            <i class="fas fa-quote-left left"></i>
+            <i class="fas fa-quote-right right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequn Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas impedit ut?t.</p>
+            <img src="img/testimonial/1.png" alt="testimonial">
+            <span>thisara perrera</span>
+          </div> 
+
+       <!--   <div class="testi-item">
+            <i class="fas fa-quote-left left"></i>
+            <i class="fas fa-quote-right right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
+            <img src="img/testimonial/1.png" alt="testimonial">
+            <span>thisara perrera</span>
+          </div>
+          
+          <div class="testi-item">
+            <i class="fas fa-quote-left left"></i>
+            <i class="fas fa-quote-right right"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
+            <img src="img/testimonial/1.png" alt="testimonial">
+            <span>thisara perrera</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="testi-slider-nav">
+        <span class="prev outer-shadow hover-in-shadow"><i class="fas fa-angle-left"></i></span>
+        <span class="next outer-shadow hover-in-shadow"><i class="fas fa-angle-right"></i></span>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!--Testimonial.end-->
+
+
+<!--Contact.start-->
+<div class="contact-section section " id="Contact">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2 data-heading="contact">Get in Touch</h2>
+      </div>
+    </div>
+    <div class="row ">
+
+      
+      <div class="contact-item  ">
+        <div class="contact-item-inner outer-shadow">
+          <i class="fas fa-phone"></i>
+          <span>Phone</span>
+          <p>01791310785</p>
+        </div>
+      </div>
+
+      <div class="contact-item ">
+        <div class="contact-item-inner outer-shadow">
+          <i class="fas fa-envelope"></i>
+          <span>E-mail</span>
+          <p>shuvokoiri89@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-inner outer-shadow">
+          <i class="fas fa-location-arrow"></i>
+          <span>Address</span>
+          <p>south double line,Sathgaon Tea Estate</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row px-5">
+    <div class="contact-form">
+      <form>
+        <div class="row">
+<div class="W-50">
+
+  <div class="input-group outer-shadow hover-in-shadow">
+    <input type="text" placeholder="name" class="input-control"/>
+  </div>
+  
+  <div class="input-group outer-shadow hover-in-shadow">
+    <input type="text" placeholder="E-mail" class="input-control"/>
+  </div>
+
+  <div class="input-group outer-shadow hover-in-shadow">
+    <input type="text" placeholder="Subject" class="input-control"/>
+  </div>
+
+</div>
+<div class="W-50">
+  <div class="input-group hover-in-shadow outer-shadow">
+    <textarea placeholder="Messege/Review" class="input-control" ></textarea>
+  </div>
+</div>
+        </div>
+        <div class="row">
+          <div class="submit-btn">
+            <buttton  type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Messege</buttton>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Contact.end-->
+
+
+
+<!-- main js -->
+<script src="js/main.js"></script>
+<!-- style switcher js -->
+<script src="js/style-switcher.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
+
