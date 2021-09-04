@@ -1414,3 +1414,14 @@ text-transform: capitalize;
         transform:translateY(0);
     }
 }
+
+.typingWrapper::after {
+    content: '|';
+    animation: blink 1s infinite step-start;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
