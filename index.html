@@ -931,14 +931,21 @@
 
     </div>
   </div>
+  <script>
+    function formSubmit(e) {
+      document.getElementById("myForm").reset();
+
+      // console.log("tipakhaise")
+    }
+  </script>
   <div class="row px-5">
     <div class="contact-form">
-      <form>
+      <form  id="myForm">
         <div class="row">
 <div class="W-50">
 
   <div class="input-group outer-shadow hover-in-shadow">
-    <input type="text" placeholder="name" class="input-control"/>
+    <input type="text" placeholder="name"id="name" class="input-control"/>
   </div>
   
   <div class="input-group outer-shadow hover-in-shadow">
@@ -958,7 +965,7 @@
         </div>
         <div class="row">
           <div class="submit-btn">
-            <buttton  type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Messege</buttton>
+            <buttton onclick="formSubmit()"  type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Messege</buttton>
           </div>
         </div>
       </form>
