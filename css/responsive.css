@@ -24,6 +24,7 @@
 .home-section .home-text{
     order: 2;
 }   
+.logo,
 .contact-section .submit-btn,
 .home-section .home-text{
     text-align: center;
@@ -81,6 +82,7 @@
 }
 
 @media (max-width: 574px) {
+    .logo{text-align: center;}
     body.stop-scrolling {
         overflow-y: auto;
     }
