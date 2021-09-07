@@ -70,8 +70,11 @@
     <div class="container">
       <div class="Row content-between ">
         <div class="logo text-center">
-  <a class="text-decoration-none text-center text-md-center text-sm-center" href="index.html">S</a>
-        </div>
+          <a class="text-decoration-none text-center text-md-center text-sm-center    text bangla hideText" href="index.html">শ</a>
+          <a class="text-decoration-none text-center text-md-center text-sm-center    text english showText" href="index.html">S</a>
+ 
+        
+</div>
         <div class="hamburger-btn outer-shadow hover-in-shadow">
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
             <span class="d-flex justify-content-center align-items-center">
@@ -84,6 +87,12 @@
       </div>
     </div>
   </header>
+  <!-- <p class="text english showText">Oi..Mate...Over here,Hey  !!!!This is a english man talking</p>
+       <h1 class="text english showText">This is a English sentence.We have ruled ou over 200years</h1>
+       y
+       
+       <p class="text bangla hideText">ইংরেজি থেকে বাংলায় অনুবাদ করা বা উল্টোদিকে বাংলা থেকে ইংরেজিতে অনুবাদ করা ...</p>
+       <h1 class="text bangla hideText">দেখুন কিভাবে বাংলা থেকে ইংরেজিতে অনুবাদ করলো ছেলেটি</h1> -->
 <!--Header.end -->
 <!-- <p ref={ref} className="typingWrapper">bla bla bla bana na naaaaa</p> -->
 
@@ -134,7 +143,7 @@
         data-period="2000"
         data-rotate='["Full-Stack Web Developer. . .", "Web-UI Designer. . . .", "JavaScript Enthusiast. . . .", "Mobile-Photography freak. . . .", "Currently discovering React-Natie" ]'></h1>
        <script>
-         var TxtRotate = function(el, toRotate, period) {
+var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -195,6 +204,8 @@ window.onload = function() {
 
 
        </script>
+       
+         
         <!-- <h1>Web Developer & UI Designer</h1> -->
         <a href="#About"  class="text-decoration-none link-item outer-shadow hover-in-shadow btn-1">More About Me</a>
       </div>
@@ -441,7 +452,7 @@ window.onload = function() {
         <h2 data-heading="Services">What I do</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row px-5">
     
       <div class="service-item">
         <div class="sercice-item-inner outer-shadow">
@@ -881,11 +892,12 @@ window.onload = function() {
 
 <!--Style switcher.start-->
 <div class="style-switcher outer-shadow">
-  <div class="style-switcher-toggler s-icon hover-in-shadow outer-shadow">
-    <i class="fas fa-cog fa-spin"></i>
-  </div>
   <div class="day-night s-icon hover-in-shadow outer-shadow">
     <i class="fas fa-moon"></i>
+  </div>
+
+  <div class="style-switcher-toggler s-icon hover-in-shadow outer-shadow">
+    <i class="fas fa-cog fa-spin"></i>
   </div>
   <h4>theme colors</h4>
   <div class="colors">
@@ -895,7 +907,12 @@ window.onload = function() {
     <span class="color-4" onclick="setActiveStyle('color-4')"></span>
     <span class="color-5" onclick="setActiveStyle('color-5')"></span> 
 </div>
+
+<div onclick="changeLanguage()" class="language s-icon hover-in-shadow outer-shadow">
+<i class="fas "  id="langeuageBtn"></i>
 </div>
+</div>
+
 <!--Style switcher.end-->
 
 <!--Testimonial.start-->
@@ -1042,6 +1059,20 @@ window.onload = function() {
   </div>
 </div>
 <!--Contact.end-->
+
+
+
+
+<!-- <p class="text english showText">Click the button to toggle between two classes.</p>
+<h1 class="text english showText">Click the button to toggle between two classes.</h1>
+
+
+<p class="text bangla hideText">ইংরেজি থেকে বাংলায় অনুবাদ করা বা উল্টোদিকে বাংলা থেকে ইংরেজিতে অনুবাদ করা ...</p>
+<h1 class="text bangla hideText">দেখুন কিভাবে বাংলা থেকে ইংরেজিতে অনুবাদ করলো ছেলেটি</h1>
+<button onclick="myFunction()">Try it</button> -->
+
+
+
 
 
 
