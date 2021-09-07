@@ -39,6 +39,12 @@
     margin-right: 15px; */
     top: 55px ;
 }
+
+.style-switcher .language{
+    /* right: 100%;
+    margin-right: 15px; */
+    top: 110px ;
+}
 .style-switcher h4{
     margin: 0 0 10px;
     color: var(--text-black-700);
