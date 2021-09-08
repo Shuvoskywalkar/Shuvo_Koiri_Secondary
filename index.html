@@ -98,7 +98,8 @@
 
 <!--navbar.start-->
 <nav class="nav-menu">
-  <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+  <div class="close-nav-menu outer-shadow hover-in-shadow text-center">
+    &times;</div>
   <div class="nav-menu-inner">
     <ul>
       <li><a href="#Home" class="inner-shadow link-item text-decoration-none active">Home</a></li>
@@ -1018,25 +1019,33 @@ window.onload = function() {
     </div>
   </div>
   <script>
-    function formSubmit(e) {
-      document.getElementById("myForm").reset();
-
-      // console.log("tipakhaise")
+    function formSubmit() {
+      document.getElementById("myForm").submit();
+      // document.getElementById("myForm").reset();
+    // console.log(document.getElementById("myForm"))
     }
   </script>
   <div class="row px-5">
     <div class="contact-form">
-      <form  id="myForm">
+      <form  id="myForm" action="https://formsubmit.co/shuvokoiri0@gmail.com" onsubmit="subFunction()" method="POST">
         <div class="row">
 <div class="W-50">
 
   <div class="input-group outer-shadow hover-in-shadow">
-    <input type="text" placeholder="name"id="name" class="input-control"/>
+    <input type="text" placeholder="name" id="name"name="name" class="input-control"/>
   </div>
   
   <div class="input-group outer-shadow hover-in-shadow">
-    <input type="text" placeholder="E-mail" class="input-control"/>
+    <input type="email" placeholder="E-mail" name="email" class="input-control" required/>
   </div>
+
+  
+  <input type="hidden" name="_next" value="https://shuvoskywalkar.github.io/Shuvo_Koiri_Secondary/Pages/thanks.html">
+  <input type="hidden" name="_subject" value="Boss!! ekjon statement dise afnare.দ্যাখেন....">
+  <input type="hidden" name="_template" value="basic">
+
+
+
 
   <div class="input-group outer-shadow hover-in-shadow">
     <input type="text" placeholder="Subject" class="input-control"/>
@@ -1045,7 +1054,7 @@ window.onload = function() {
 </div>
 <div class="W-50">
   <div class="input-group hover-in-shadow outer-shadow">
-    <textarea placeholder="Messege/Review" class="input-control" ></textarea>
+    <textarea placeholder="Messege/Review" name="messege" class="input-control" ></textarea>
   </div>
 </div>
         </div>
