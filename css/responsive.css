@@ -82,7 +82,9 @@
 }
 
 @media (max-width: 574px) {
-    .logo{text-align: center;}
+    .logo a{text-align: center;
+        
+    }
     body.stop-scrolling {
         overflow-y: auto;
     }
