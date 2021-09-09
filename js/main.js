@@ -121,7 +121,7 @@ filterContainer.addEventListener('click',(event)=>{
     porfolioItems.forEach((item)=>{
         if (target===item.getAttribute('data-category') || target==='all') {
      item.classList.remove('hide');
-     item.classList.add('show')
+     item.classList.add('show');
         }
         else{
             item.classList.remove('show');
@@ -186,6 +186,7 @@ slideIndex=0;
     popupSlideshow();
 
 })
+
 //prev slide
 prevBtn.addEventListener("click",()=>{
     if (slideIndex===0) {
