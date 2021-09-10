@@ -64,8 +64,8 @@
     <div></div>
     <div></div>
   </div> -->
-  <div class="d-flex justify-content-center ">
-    <div class="spinner-grow  " style="width: 1rem; height: 1rem" role="status">
+  <div class=" justify-content-center ">
+    <!-- <div class="spinner-grow  " style="width: 1rem; height: 1rem" role="status">
       <img src="" alt="" srcset=""/>
     <span class="sr-only">Loading...</span>
   </div>
@@ -77,8 +77,8 @@
   <div class="d-flex justify-content-center px-1">
     <div class="spinner-grow  " style="width: 6rem; height: 6rem"  role="status">
         <img src="" alt="" srcset=""/>
-      <span class="sr-only">Loading...</span>
-    </div>
+      <span class="sr-only">Loading...</span> -->
+    <!-- </div> -->
   </div> <div class="d-flex justify-content-center ">
     <div class="spinner-grow  " style="width: 9rem; height: 9rem" role="status">
         <img src="" alt="" srcset=""/>
@@ -121,7 +121,7 @@
 <nav class="nav-menu">
   <div class="close-nav-menu outer-shadow hover-in-shadow text-center">
     &times;</div>
-  <div class="nav-menu-inner">
+  <div class="nav-menu-inner text english showText">
     <ul>
       <li><a href="#Home" class="inner-shadow link-item text-decoration-none active">Home</a></li>
       <li><a href="#About" class="outer-shadow link-item hover-in-shadow text-decoration-none">About</a></li>
@@ -133,8 +133,19 @@
     </ul>
   </div>
   <!-- <p class="copyright-text">&copy;2020 The webshala </p> -->
-  
-  
+  <div class="nav-menu-inner text bangla hideText">
+    <ul>
+      <li><a href="#Home" class="inner-shadow link-item text-decoration-none active">হোম</a></li>
+      <li><a href="#About" class="outer-shadow link-item hover-in-shadow text-decoration-none">সম্পর্কে</a></li>
+      <li><a href="#Services" class="outer-shadow link-item hover-in-shadow text-decoration-none">সেবাসমুহ</a></li>
+      <li><a href="#Portfolio" class="outer-shadow link-item hover-in-shadow text-decoration-none">কার্যসম্ভার</a></li>
+      <li><a href="#Testimonial" class="outer-shadow link-item hover-in-shadow text-decoration-none">প্রসংশাপত্র</a></li>
+      <li><a href="#Contact" class="outer-shadow link-item hover-in-shadow text-decoration-none">যোগাযোগ</a></li>
+
+    </ul>
+  </div>
+    <!-- <p class="copyright-text">&copy;2020 The webshala </p> -->
+
 </nav>
 <div class="fade-out-effect"></div>
 <!--navbar.end-->
@@ -157,13 +168,18 @@
   </div>
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center full-screen">
-      <div class="home-text col-md-6">
+
+      <div class="home-text col-md-6 text english showText">
         <p>Hello</p>
         <h2>I'm Shuvo Koiri</h2>
-        <h1 
-        class="txt-rotate"
-        data-period="2000"
-        data-rotate='["Full-Stack Web Developer. . .", "Web-UI Designer. . . .", "JavaScript Enthusiast. . . .", "Mobile-Photography freak. . . .", "Currently discovering React-Natie" ]'></h1>
+        <div class="d-flex flex-items-center px-5 px-md-0">
+          <i class="fas fa-pen-nib icon penIcon" style="font-size: x-large;"></i>
+
+          <h1 
+          class="txt-rotate px-1"
+          data-period="2000"
+          data-rotate='["Full-Stack Web Developer. ", "Web-UI Designer. . . ", "JavaScript Enthusiast. . . ", "Mobile-Photography freak. ", "Currently discovering React-Native" ]'></h1>
+        </div>
        <script>
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
@@ -223,14 +239,89 @@ window.onload = function() {
   // document.body.appendChild(css);
 };
 
-
-
        </script>
+         
+        <a href="#About"  class="text-decoration-none link-item outer-shadow hover-in-shadow btn-1">More About Me</a>
+      </div>
+
+      <div class="home-text col-md-6 text bangla hideText">
+        <p>নমষ্কার !</p>
+        <h2>আমি শুভ কৈরী</h2>
+        <div class=" d-flex flex-items-center px-5 px-md-0">
+      <i class="fas fa-pen-nib icon penIcon" style="font-size: x-large;"></i>
+
+      <h1 
+      class="txt-rotate px-1"
+      data-period="2000"
+      data-rotate='["ফুল-স্ট্যাক ডেভেলপার. . .", "ওয়েব-ইউআই ডিজাইনার. . . ", "জাভাস্ক্রিপ্ট আসক্ত. . . . ", "মোবাইল-ফটোগ্রাফি ফ্রিক. . . ", "  বর্তমানে শিখছি রিয়েক্ট-নেটিভ..." ]'></h1>
+
+              </div>
+ <script>
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '00000';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<h1 class="wrap">'+this.txt+'</h1>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  // var css = document.createElement("style");
+  // css.type = "text/css";
+  // css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  
+  // document.body.appendChild(css);
+};
+</script>
        
          
         <!-- <h1>Web Developer & UI Designer</h1> -->
-        <a href="#About"  class="text-decoration-none link-item outer-shadow hover-in-shadow btn-1">More About Me</a>
+        <a href="#About"  class="text-decoration-none link-item outer-shadow hover-in-shadow btn-1">আমার ব্যাপারে জানুন</a>
       </div>
+
+
       <div class="home-img col-md-6">
         <div class="img-box inner-shadow ">
           <img src="img/cropedbg.png"  height="404px" width="404px"  class="outer-shadow" alt="profile-pic" >
@@ -247,59 +338,101 @@ window.onload = function() {
     <div class="container">
       <div class="row">
         <div class="section-title">
-          <h2 data-heading="main info" >About me</h2>
+          <h2 class="text english showText" data-heading="main info" >About me</h2>
+          <h2 class="text bangla hideText" data-heading="প্রধান তথ্য" >আমার সম্পর্কে</h2>
+
         </div>
       </div>
       <div class="row">
         <div class="about-img">
           <div class="img-box inner-shadow" >
-<img src="img/cropedbg.png" height="400px" class="outer-shadow" alt="profile-pic" >
+<img src="img/cropedbg.png" height="510px" class="outer-shadow" alt="profile-pic" >
             </div>
 
             <div class="social-links">
-            <a href="#" class="outer-shadow hover-in-shadow">
+            <a target="_blank" href="https://www.facebook.com/Skywalker2219/" class="outer-shadow hover-in-shadow">
              <i class="fab fa-facebook"></i>
             </a>
-            <a href="#"  class="outer-shadow hover-in-shadow">
-              <i class="fab fa-youtube"></i>
+            <a target="_blank" href="https://github.com/Shuvoskywalkar/"  class="outer-shadow hover-in-shadow">
+              <i class="fab fa-github"></i>
              </a>
-             <a href="#"  class="outer-shadow hover-in-shadow">
+             <a target="_blank" href="#"  class="outer-shadow hover-in-shadow">
               <i class="fab fa-instagram"></i>
              </a>
-             <a href=""  class="outer-shadow hover-in-shadow">
+             <a target="_blank" href="#"  class="outer-shadow hover-in-shadow">
                <i class="fab fa-linkedin"></i>
              </a>
           </div>
 
             </div>
         <div class="about-info">
-<p>
-  <span>Hi! My name is Shuvo Koiri.I am a Web-Ui Designer & Developer.</span>
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
-  <p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p class="text english showText">
+  <span class="text english showText">Hi! My name is Shuvo Koiri.I am a Web-Ui Designer & Full-Stack Developer.</span>
+  "I am a web developer who is
+  proficient in both back-end and
+  front-end frameworks. My passion
+  lies in learning about the latest
+  technologies.Beside of this I am a
+  student of inter final-year.My aim
+  is to become an CSE Engineer
+  after graduation or at least get placed in a good university.I am also very expert in UI design using Figma .I have a huge amount  of intrest in Mobile photography and Graphics Design also"</p>
+  <p class="text english showText">I am a certified Web Developer from MR.Jhankar Mahbub's Complete Web Development Course(2nd batch) . I was one of the students who placed on the top 15% of the course finishers .
   </p> 
-  <p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas iusto voluptatum velit!."
-  </p> 
-<a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow text-decoration-none">Download CV</a>
-<a href="#Contact" class="btn-1 outer-shadow link-item hover-in-shadow text-decoration-none">Hire Me</a>
+  <p class="text english showText">"I strongly belive what warren buffet says,"The best investment you can make is to investing on yourself".Im fond learning new things & Skills.Specially Stuffs about Programming and and a outlined mission alwayes gives me a kickstart."
+  </p>
+
+  <p class="text bangla hideText">
+    <span class="text bangla hideText">ওহে ! আমার নাম শুভ কৈরী । আমি একজন ওয়েব-ইউআই ডিজাইনার এবং ফুল স্ট্যাক-ডেভেলপার।.</span>
+     "আমি একজন ওয়েব ডেভেলপার যে
+    ব্যাক-এন্ড এবং  ফ্রন্ট-এন্ড উভয় ক্ষেত্রের ফ্রেমওয়ার্কের সাথে পরিচিত । আমি নতুন নতুন জিনিস শেখার জন্য সবসময় উৎসাহী একজন লোক, বিশেষত প্রযুক্তিগত জিনিসগুলো সম্পর্কে শিখতে অনেক উপভোগ করী।
+    এর পাশাপাশি আমি একজন
+    ইন্টার ফাইনাল-ইয়ারের ছাত্র।আমার লক্ষ্য
+    সিএসই ইঞ্জিনিয়ার হওয়া
+    গ্র্যাজুয়েশন করার পর অথবা কমপক্ষে একটি ভাল বিশ্ববিদ্যালয়ে স্থান পাওয়া। আমি ফিগমা ব্যবহার করে UI ডিজাইনে খুব বিশেষজ্ঞ। আমার মোবাইল ফটোগ্রাফি এবং গ্রাফিক্স ডিজাইনেও প্রচুর আগ্রহ রয়েছে এবং এসবেও যথেষ্ঠ সময় ব্যায় করে থাকি"</p>
+    <p class="text bangla hideText">"আমি জনাব ঝংকার মাহবুবের কমপ্লিট ওয়েব ডেভেলপমেন্ট কোর্স(২য় ব্যাচ) থেকে সার্টিফিকেটপ্রাপ্ত একজন ওয়েব ডেভেলপার। আমি সেই ছাত্রদের মধ্যে একজন ছিলাম যারা কোর্স সমাপ্তকারীদের মধ্যে শীর্ষের ১৫% এ ছিল"
+    </p> 
+    <p class="text bangla hideText">""ওয়ারেন বাফেটের একটা কথা আমি দৃঢ় ভাবে বিশ্বাস করি," আপনি যেটা সেরা বিনিয়োগ করতে পারেন তা হল নিজের উপর বিনিয়োগ করা। "আমি নতুন জিনিস এবং নতুন দক্ষতা শিখতে পছন্দ করি। বিশেষ করে প্রোগ্রামিং এবং একটি রূপরেখিত মিশন সর্বদা আমাকে একটি কিকস্টার্ট দিয়ে থাকে।"
+      "
+    </p>
+   
+
+
+<a target="_blank" href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow text-decoration-none text english showText">Download CV</a>
+<a href="#Contact" class="btn-1 outer-shadow link-item hover-in-shadow text-decoration-none text english showText">Hire Me</a>
+
+
+<a target="_blank" href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow text-decoration-none text bangla hideText">ডাউনলোড সিভি </a>
+<a href="#Contact" class="btn-1 outer-shadow link-item hover-in-shadow text-decoration-none text bangla hideText">কাজ আছে</a>
         </div>
       </div>
       
      <div class="row">
        <div class="about-tabs">
-         <span class="tab-item outer-shadow active" data-target=".skills">skills</span>
-         <span class="tab-item " data-target=".experience">experience</span>
-         <span class="tab-item " data-target=".education">education</span>
-     </div>
+         <span class="tab-item outer-shadow active text english showText" data-target=".skills">skills</span>
+         <span class="tab-item outer-shadow  text bangla hideText" data-target=".skills">দক্ষতা</span>
+
+         <span class="tab-item text english showText" data-target=".experience ">experience</span>
+         <span class="tab-item text bangla hideText" data-target=".experience ">অভিজ্ঞতা</span>
+
+         <span class="tab-item text english showText" data-target=".education ">education</span>
+         <span class="tab-item text bangla hideText" data-target=".education ">শিক্ষা</span>
+
+        </div>
      </div>
 
+
+     
     <div class="row px-3">
       <div class="skills tab-content active ">
         <div class="row">
           <div class="skill-item">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between text english showText">
               <p>HTML</p> <span>50%</span>
               </div>
+            <div class="d-flex justify-content-between text bangla hideText">
+              <p>এইচটিএমএল</p> <span>৫০%</span>
+              </div>
+
             <div class="progress inner-shadow">
               <div class="progress-bar" style="width: calc(50% - 14px)">
               <!-- <span class="text-align-center">50%</span> -->
@@ -307,37 +440,51 @@ window.onload = function() {
             </div>
           </div>
           <div class="skill-item">
-            <div class="d-flex justify-content-between">
-              <p>JavaScript</p> <span>80%</span>
+            <div class="d-flex justify-content-between text english showText">
+              <p>JavaScript</p> <span>75%</span>
               </div>
+              <div class="d-flex justify-content-between text bangla hideText">
+                <p>জাভাস্ক্রিপ্ট</p> <span>৭৫%</span>
+                </div>
+
             <div class="progress inner-shadow">
-              <div class="progress-bar" style="width: calc(20% - 14px)">
+              <div class="progress-bar" style="width: calc(75% - 14px)">
               <!-- <span>20%</span> -->
             </div>
             </div>
           </div>
           <div class="skill-item">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between text english showText">
             <p>bootstrap</p> <span>80%</span>
             </div>
+            <div class="d-flex justify-content-between text bangla hideText">
+              <p>বুটস্ট্র্যাপ</p> <span>৮০%</span>
+              </div>
             <div class="progress inner-shadow">
               <div class="progress-bar" style="width: calc(80% - 14px)">
               </div>
             </div>
           </div>
     <div class="skill-item">
-      <div class="d-flex justify-content-between">
-        <p>CSS</p> <span>40%</span>
+      <div class="d-flex justify-content-between text english showText">
+        <p>CSS</p> <span>50%</span>
         </div>
+        <div class="d-flex justify-content-between text bangla hideText">
+          <p>সিএসএস</p> <span>৫০%</span>
+          </div>
       <div class="progress inner-shadow">
         <!-- <span>40%</span> -->
-        <div class="progress-bar" style="width: calc(40% - 14px)">
+        <div class="progress-bar" style="width: calc(50% - 14px)">
         </div>
       </div>
     </div> 
 <div class="skill-item">
-  <div class="d-flex justify-content-between">
-    <p>CSS</p> <span>40%</span>
+  <div class="d-flex justify-content-between text english showText">
+    <p>React</p> <span>85%</span>
+    </div>
+    
+  <div class="d-flex justify-content-between text bangla hideText">
+    <p>রিয়েক্ট</p> <span>৮৫%</span>
     </div>
   <div class="progress inner-shadow">
     <div class="progress-bar" style="width: calc(85% - 14px)">
@@ -346,23 +493,27 @@ window.onload = function() {
   </div>
 </div>
 <div class="skill-item">
-  <div class="d-flex justify-content-between">
-    <p>Node JS</p> <span>85%</span>
+  <div class="d-flex justify-content-between text english showText">
+    <p>Node JS</p> <span>60%</span>
     </div>
-  
+    <div class="d-flex justify-content-between text bangla hideText">
+      <p>নোড জেএস</p> <span>৬০%</span>
+      </div>
   <div class="progress inner-shadow">
-    <div class="progress-bar" style="width: calc(85% - 14px)">
-    <!-- <span>85%</span> -->
+    <div class="progress-bar" style="width: calc(60% - 14px)">
   </div>
   </div>
 </div>
 <div class="skill-item">
-  <div class="d-flex justify-content-between">
-    <p class="font-weight-bold">CSS</p> <span class="">60%</span>
+  <div class="d-flex justify-content-between text english showText">
+    <p class="font-weight-bold">Next JS</p> <span class="">60%</span>
+    </div>
+  <div class="d-flex justify-content-between text bangla hideText">
+    <p class="font-weight-bold">নেক্সট জেএস</p> <span class="">60%</span>
     </div>
   <div class="progress inner-shadow">
     <div class="progress-bar" style="width: calc(60% - 14px)">
-    <!-- <span>60%</span> -->
+  
   </div>
   </div>
 </div> 
@@ -379,34 +530,65 @@ window.onload = function() {
       <div class="timeline">
         <div class="row">
 
-          <div class="timeline-item">
-            <div class="timeline-item-inner outer-shadow">
-              <i class="fas fa-briefcase icon"></i>
-              <span>oct, 2020 - present</span>
-              <h3>full stack developer</h3>
-              <h4>SkyDevs,Bangladesh</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
-            </div>
-          </div>
+          <div class="timeline-item ">
 
-          <div class="timeline-item">
-            <div class="timeline-item-inner outer-shadow">
+            <div class="timeline-item-inner outer-shadow ">
               <i class="fas fa-briefcase icon"></i>
-              <span>apr, 2021 - present</span>
-              <h3>Graphics Designer</h3>
-              <h4>SkyDevs,Bangladesh</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
-            </div>
-          </div>
+              <span class="text english showText">october, 2020 - present</span>
+              <h3 class="text english showText">full stack Web Developer</h3>
+              <h4 class="text english showText">Freelancing / Practicing in Home</h4>
+              <p class="text english showText">My journey start here,after completing the
+                complete web develpment course from
+                Bangla.ProgrammingHero.Com & geting certified as
+                a Web-Dev.What Im doing now (in this era of my
+                life) is just gathering more and more knowledge
+                & successful memories</p>
 
-          <div class="timeline-item">
-            <div class="timeline-item-inner outer-shadow">
-              <i class="fas fa-briefcase icon"></i>
-              <span>july, 2021 - present</span>
-              <h3>Web-UI Designer</h3>
-              <h4>SkyDevs,Bangladesh</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+                <span class="text bangla hideText">অক্টোবর, ২০২০ - বর্তমান </span>
+              <h3 class="text bangla hideText">ফুল-স্ট্যাক ওয়েব ডেভেলপার</h3>
+              <h4 class="text bangla hideText">ফ্রিল্যান্সিং / বাড়িতে অনুশীলন</h4>
+              <p class="text bangla hideText">এখান থেকে শুরু হয় আমার যাত্রা , Bangla.programming-hero.com থেকে ফুল-স্ট্যাক ওয়েব ডেভেলপার হিসেবে সার্টিফিকেট পাওয়ার পর ; পড়াশোনায় ব্যাস্ত থাকার কারণে ওয়েব-ডেভেলপার হিসেবে চাকরী না করতে পারলেও যতটা সম্ভব প্রোগ্রামিং এর সাথে থাকার চেষ্টা করি ।
+              </p>
             </div>
+           
+
+          </div>
+          
+
+          <div class="timeline-item ">
+            
+            <div class="timeline-item-inner outer-shadow ">
+              <i class="fas fa-briefcase icon"></i>
+              <span class="text english showText">april, 2021 - present</span>
+              <h3 class="text english showText">Graphics Designer</h3>
+              <h4 class="text english showText">Freelancing / Practicing in Home</h4>
+              <p class="text english showText">I had so many free time in the time period of the second wave of corona . It would be a very pity incident If I had wasted the chance of learning something new . I am a Certified Graphics Designer for 10MS school Courses , Bangladesh.I have completed more than 30 projects under the instruction and guideline of the instructor ms.Anisha Saiyara Taznoor.</p>
+          
+              <span class="text bangla hideText">এপ্রিল, 2021 - বর্তমান</span>
+              <h3  class="text bangla hideText">গ্রাফিক্স ডিজাইনার</h3>
+              <h4 class="text bangla hideText">ফ্রিল্যান্সিং / বাড়িতে অনুশীলন</h4>
+              <p class="text bangla hideText">করোনার দ্বিতীয় তরঙ্গের সময়কালে আমার অনেক অবসর সময় ছিল। যদি আমি নতুন কিছু শেখার সুযোগ নষ্ট করতাম তবে এটি খুব দুঃখজনক ঘটনা হতো। আমি 10MS স্কুল কোর্সেস থেকে একজন সার্টিফাইড পাওয়ারপয়েন্ট গ্রাফিক্স ডিজাইনার। আমি শ্রদ্ধেয় প্রশিক্ষক জনাবা আনিশা সাইয়ারা তাজনুরের নির্দেশনার অধীনে 30 টিরও বেশি প্রকল্প সম্পন্ন করেছি গ্রাফিক্স ডিজাইনের।</p>
+            </div>
+
+          </div>
+        
+
+          <div class="timeline-item ">
+
+            <div class="timeline-item-inner outer-shadow ">
+              <i class="fas fa-briefcase icon"></i>
+              <span class="text english showText">july, 2021 - present</span>
+              <h3 class="text english showText">UI Designer</h3>
+              <h4 class="text english showText">Freelancing / Practicing in Home</h4>
+              <p class="text english showText">Currently,I do not have any certificate as a UI designer . I am a self made UI-Designer who has learnt and still learning from varrious sources like youtউbe , online articles and monitoring others designs .My work has given on the portfolio which clearifies that I certainly don't need any certification to prove myself as a UI designer</p>
+            
+              <span class="text bangla hideText">জুলাই, 2021 - বর্তমান </span>
+              <h3 class="text bangla hideText">ইউআই ডিজাইনার</h3>
+              <h4 class="text bangla hideText">ফ্রিল্যান্সিং / বাড়িতে অনুশীলন</h4>
+              <p class="text bangla hideText">বর্তমানে, UI ডিজাইনার হিসেবে আমার কোন সার্টিফিকেট নেই। আমি একজন স্বনির্মিত ইউআই-ডিজাইনার যে ইউটিউব, অনলাইন আর্টিকেল এবং অন্যান্য ডিজাইনারদের পর্যবেক্ষণের মতো বিভিন্ন উৎস থেকে শিখেছি এবং এখনও শিখছি। আমার কাজগুলো পোর্টফোলিওতে দেওয়া হয়েছে যা স্পষ্ট করে যে নিজেকে প্রমাণ করার জন্য আমার কোনো প্রশংসাপত্রের প্রয়োজন নেই UI ডিজাইনার হিসেবে।
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -428,30 +610,62 @@ window.onload = function() {
           <div class="timeline-item">
             <div class="timeline-item-inner outer-shadow">
               <i class="fas fa-graduation-cap icon"></i>
-              <span>oct, 2020 - present</span>
-              <h3>full stack developer</h3>
-              <!-- <h4>SkyDevs,Bangladesh</h4> -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+              <span class="text english showText">Jan, 2009 - Dec, 2013</span>
+              <h3 class="text english showText">Primary School Certificate</h3>
+              <h4 class="text english showText" >Sathgaon Govt. Primary School</h4>
+              <p class="text english showText">I got admitted to my primary school in 2009 when I was 6.Passed some great moments , made some forgotten friends ,did bit of stuidies and finally got passed with GPA 4.75 after 5 years at PSC Examination 2013 .</p>
+
+              <span class="text bangla hideText">জানু, ২০০৯ - ডিস,২০১৩ </span>
+              <h3 class="text bangla hideText"> প্রাথমিক স্কুল সার্টিফিকেট</h3>
+              <h4 class="text bangla hideText">সাতগাঁও সরকার প্রাথমিক বিদ্যালয়</h4>
+              <p class="text bangla hideText">আমি ২০০৯ সালে আমার প্রাথমিক বিদ্যালয়ে ভর্তি হয়েছিলাম যখন আমার বয়স ছিল ৬ বছর । কিছু দুর্দান্ত মুহুর্ত কাটালাম, কিছু ভুলে যাওয়া বন্ধু তৈরি করলাম, কিছুটা পড়াশোনাও করলাম এবং অবশেষে  ৫ বছর পর জিপিএ ৪.৭৫ পেয়ে পাস করেছি পিএসসি পরীক্ষা(২০১৩) তে। 
+              </p>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-item-inner outer-shadow">
               <i class="fas fa-graduation-cap icon"></i>
-              <span>apr, 2021 - present</span>
-              <h3>Graphics Designer</h3>
-              <!-- <h4>SkyDevs,Bangladesh</h4> -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+              <span class="text english showText">jan, 2015 - may, 2019</span>
+              <h3 class="text english showText">Secondary School Certificate</h3>
+              <h4 class="text english showText">BTRI High School,Bangladesh</h4>
+              <p class="text english showText">
+                Passed  the SSC exam with
+                - GPA: 4.28
+                - Passed JSC(2016) exam with
+                - GPA: 4.45
+                --Spent the most beautiful & memorable times of life
+                --decided to choose Science as my group background
+              </p>
+
+                <span class="text bangla hideText">জানু, ২০১৫ - মে,২০১৯ </span>
+              <h3 class="text bangla hideText">মাধ্যমিক স্কুল সার্টিফিকেট</h3>
+              <h4 class="text bangla hideText">বিটিআরআই  হাই স্কুল, বাংলাদেশ</h4>
+              <p class="text bangla hideText"> এসএসসি পরীক্ষা পাশ করেছি
+                - জিপিএ: 4.28 নিয়ে
+                - জেএসসি (২০১৬) পরীক্ষায় পাশ করেছি
+                - জিপিএ: 4.45 নিয়ে
+                - এবং......জীবনের সবচেয়ে সুন্দর এবং স্মরণীয় সময়গুলো কাটিয়েছি
+                - আমি আমার বিষয় পটভূমি হিসাবে বিজ্ঞান চয়ন করার সিদ্ধান্ত নিয়েছে
+              </p>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-item-inner outer-shadow">
               <i class="fas fa-graduation-cap icon"></i>
-              <span>july, 2021 - present</span>
-              <h3>Web-UI Designer</h3>
-              <!-- <h4>SkyDevs,Bangladesh</h4> -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta praesentium, aspernatur tempore error libero, adipisci dignissimos atque dolore quisquam fuga vel. Impedit laudantium porro ipsa ipsam aperiam neque, harum molestiae?</p>
+              <span class="text english showText">June, 2019 - present</span>
+              <h3 class="text english showText">Higher Secondary School Certificate</h3>
+              <h4 class="text english showText">The Buds Residential Model School & College   </h4>
+              <p class="text english showText">Just trying to work hard and get passed with a Good GPA .I am a student of inter final year and my group is science .My ultimate goal is to do good in my University admission test which will occur after the HSC exam .</p>
+
+              <span class="text bangla hideText">জুন, ২০১৯ - বর্তমান </span>
+              <h3 class="text bangla hideText">উচ্চ মাধ্যমিক স্কুল সার্টিফিকেট</h3>
+              <h4 class="text bangla hideText">দি বাডস রেসিডেন্সিয়াল মডেল স্কুল অ্যান্ড কলেজ
+              </h4>
+              <p class="text bangla hideText">আমি দিনে দিনে পড়াশোনায় বেশি মনোযোগী হওয়ার চেষ্টা করছি যাতে আমি আসন্ন এইচএসসি পরীক্ষায় ভালো জিপিএ নিয়ে পাস করতে পারি। আমি ইন্টার ফাইনাল ইয়ারের ছাত্র এবং আমার বিভাগ বিজ্ঞান। আমার চূড়ান্ত লক্ষ্য বিশ্ববিদ্যালয়ের ভর্তি পরীক্ষা যা আসন্ন এইচএসসি পরীক্ষার পর হবে।
+
+              </p>
             </div>
           </div>
 
@@ -471,61 +685,83 @@ window.onload = function() {
   <!-- <div class="Container"> -->
     <div class="row">
       <div class="section-title">
-        <h2 data-heading="Services">What I do</h2>
+        <h2 class="text english showText" data-heading="Services">What I do</h2>
+        
+        <h2 class=" text bangla hideText" data-heading="সেবাসমূহ">আমি যা যা করি</h2>
       </div>
     </div>
     <div class="row px-3">
-    
+
       <div class="service-item">
         <div class="sercice-item-inner outer-shadow">
         <div class="icon inner-shadow">
-          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-code"></i>
         </div>
-        <h3>UI/Ux Design</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+        <h3 class="text english showText">Web-Development</h3>
+        <p class="text english showText">I am an proffesional Full-Stack developer with more than 1 year of experience . I am rigirously familiar and falled love with javascript . I belong to the MERN-stack community of javascript Full-Stack developers!</p>
+    
+        <h3 class="text bangla hideText">ওয়েব ডেভেলপমেন্ট </h3>
+        <p class="text bangla hideText">আমি 1 বছরেরও বেশি অভিজ্ঞতার সাথে একটি পেশাগত পূর্ণ-স্ট্যাক ওয়েব ডেভেলপার। আমি জাভাস্ক্রিপ্টের সাথে খুব পরিচিত এবং এর প্রেমে পড়া অবস্থায় আছি । আমি জাভাস্ক্রিপ্ট ফুল-স্ট্যাক ডেভেলপারদের MERN- স্ট্যাক সম্প্রদায়ের অন্তর্গত!</p>
+      </div>
+      </div>
+
+      <div class="service-item">
+        <div class="sercice-item-inner outer-shadow">
+        <div class="icon inner-shadow">
+          <i class="fab fa-figma"></i>
+        </div>
+        <h3 class="text english showText">UI/Ux Design</h3>
+        <p class="text english showText">I am an Web & mobile Ui designer who can design both of mobile and web apps . I use FIGMA as my tool,althrough I have a good expertise in PowePoint also</p>
+    
+        <h3 class="text bangla hideText">ইউ-আই/ইউ-এক্স ডিজাইন</h3>
+        <p class="text bangla hideText">আমি একজন ওয়েব এবং মোবাইল ইউআই ডিজাইনার । আমি মোবাইল এবং ওয়েব উভয় অ্যাপ্লিক্যাশনই ডিজাইন করতে সক্ষম । আমি আমার হাতিয়ার হিসাবে ফিগমা ব্যবহার করি, যদিও আমার পাওয়ারপয়েন্টেও ভাল দক্ষতা রয়েছে
+        </p>
+    
       </div>
       </div>
     
+
+      <div class="service-item">
+        <div class="sercice-item-inner outer-shadow">
+        <div class="icon inner-shadow">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text english showText">Responsive Design</h3>
+        <p class="text english showText">I have never made any unresponsive or non-device friendly website after being an developer . It is my high prioriy that I Im making it should Responsive and equal to every IT device user who will be in need to use my website . </p>
+       
+        
+        <h3 class="text bangla hideText">রেসপন্সিভ ডিজাইন</h3>
+        <p class="text bangla hideText">ডেভেলপার হওয়ার পর আমি কখনোই কোন প্রতিক্রিয়াশীল বা নন-ডিভাইস উপযুক্ত ওয়েবসাইট তৈরি করিনি। এটা আমার উচ্চ অগ্রাধিকার যে আমি এটিকে প্রতিক্রিয়াশীল এবং প্রতিটি আইটি ডিভাইস ব্যবহারকারীর সামনে সমান করে তুলতে চাই যাদের আমার ওয়েবসাইট ব্যবহার করতে হবে।
+        </p>
+      </div>
+      </div>      
 
     <div class="service-item">
       <div class="sercice-item-inner outer-shadow">
       <div class="icon inner-shadow">
-        <i class="fas fa-palette"></i>
+        <i class="fas fa-pencil-ruler"></i>
       </div>
-      <h3>Graphics Design</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+
+      <h3 class="text english showText">Graphics Design</h3>
+      <p class="text english showText">Photoshop , Powerpoint , Figma , Wix & Adobe XD ---these are the tool which I am familiar with . To be honest, I dont have that much experiences in this in comparing of Web-Design or Ui Design .But I like theese stuffs to learn   </p>
+    
+      <h3 class="text bangla hideText">গ্রাফিক্স ডিজাইন </h3>
+      <p class="text bangla hideText">ফটোশপ, পাওয়ারপয়েন্ট, ফিগমা, উইক্স এবং অ্যাডোব এক্সডি --- এইগুলি হল সেই টুল যার সাথে আমি পরিচিত। সত্যি কথা বলতে, যদি আমার ওয়েব এবং উই-আই ডিজাইন যাত্রার সাথে এটির তুলনা করি তবে আমার এত অভিজ্ঞতা নেই েএতে। কিন্তু ব্যাক্তিগতভাবে আমি এই জিনিসগুলি শিখতে পছন্দ করি</p>
     </div>
     </div>
   
 
-  <div class="service-item">
-    <div class="sercice-item-inner outer-shadow">
-    <div class="icon inner-shadow">
-      <i class="fas fa-code"></i>
-    </div>
-    <h3>Clean Design</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
-  </div>
-  </div>
 
 <div class="service-item">
   <div class="sercice-item-inner outer-shadow">
   <div class="icon inner-shadow">
-    <i class="fas fa-laptop-code"></i>
+    <i class="fas fa-bug "></i>
   </div>
-  <h3>Responsive Design</h3>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
-</div>
-</div>
-
-
-<div class="service-item">
-  <div class="sercice-item-inner outer-shadow">
-  <div class="icon inner-shadow">
-    <i class="fas fa-search"></i>
-  </div>
-  <h3>Responsive Design</h3>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+  <h3 class="text english showText">Bug-Free Design</h3>
+  <p class="text english showText">My second priority is to deliver a bug free service , doesn't matters if it takes me to submit in an outlined day .But it is my ethic that I would make once rather than upgrading it again & again . It is kind of justice to my creation!</p>
+  
+  <h3 class="text bangla hideText">কীটমুক্ত ডিজাইন</h3>
+  <p class="text bangla hideText">আমার দ্বিতীয় অগ্রাধিকার হল একটি বাগ ফ্রি সেবা প্রদান করা, এটির সামনে একটি রূপরেখিত দিনে জমা না দিতে পারার খেদও আমার কাছে কোন ব্যাপার না।যদিও কোনোদিন দেরিতে কওনো কাজ জমা দিতে হয়নি এখনো। এটা নিজের সৃষ্টির প্রতি আমার  এক ধরনের ন্যায়বিচার</p>
 </div>
 </div>
 
@@ -534,8 +770,14 @@ window.onload = function() {
   <div class="icon inner-shadow">
     <i class="fas fa-bullhorn"></i>
   </div>
-  <h3>Responsive Design</h3>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, culpa? Perspiciatis voluptas none odio nesciunt! Sed exercitationem praesentium cumque facilis, cum nobis!</p>
+  <h3 class="text english showText">Announcement</h3>
+  <p class="text english showText">We have grown up hearing this that Javascript is not for App development ; It is only for website development work .well well well,Thanks to Mr.Mark Z . His invested & invented the  REACT NATIVE framework project has beaten this line of division.Soon in future(4-6 months) I will be App Developer too</p>
+
+  
+  <h3 class="text bangla hideText">ঘোষনা</h3>
+  <p class="text text bangla hideText">আমরা এটা শুনে বড় হয়েছি যে জাভাস্ক্রিপ্ট অ্যাপ ডেভেলপমেন্টের জন্য নয়; এটি শুধুমাত্র ওয়েবসাইট ডেভেলপমেন্ট কাজের জন্য। সত্যিই??? তাহলে,জনাব মার্ক জেডকে ধন্যবাদ। তার বিনিয়োগকৃত "রিয়েক্ট নেটিভ" ফ্রেমওয়ার্ক প্রজেক্টটি বিভাজনের এই লাইনটিকে পরাজিত করে এক নতূন দিগন্তের সূচনা করেছে।মূলকথা ,
+    শীঘ্রই ভবিষ্যতে (4-6 মাস) আমিও  অ্যাপ ডেভেলপার হব ।
+  </p>
 </div>
 </div>
 
@@ -551,18 +793,30 @@ window.onload = function() {
   <div class="container">
     <div class="row">
       <div class="section-title">
-        <h2 data-heading="Portfolio">Latest Works</h2>
+        <h2 data-heading="Portfolio " class="text english showText">Latest Works</h2>
+        <h2 data-heading="কার্যসম্ভার " class="text bangla hideText">সদ্যকৃত কাজগুলো</h2>
       </div>
     </div>
     <!--Portfolio filter.start-->
 <div class="row">
-  <div class="portfolio-filter">
-  <span class="filter-item outer-shadow active" data-target="all">all</span>
-  <span class="filter-item" data-target="web-application">web application</span>
-  <span class="filter-item" data-target="photography">photography</span>
-  <span class="filter-item" data-target="UI-Designs">Ui Designs</span>
-  <span class="filter-item" data-target="e-commerce">E-Commerce</span>
-  <span class="filter-item" data-target="mobile-app">Mobile App</span>
+  <div class="portfolio-filter ">
+  <span class="filter-item outer-shadow active text english showText" data-target="all">all</span>
+  <span class="filter-item outer-shadow  text bangla hideText" data-target="all">সব</span>
+ 
+  <span class="filter-item text english showText" data-target="web-application">web application</span> 
+  <span class="filter-item  text bangla hideText" data-target="web-application">ওয়েব-অ্যাপ্লিক্যাশন</span>
+ 
+  <span class="filter-item text english showText" data-target="photography">photography</span>
+  <span class="filter-item text bangla hideText" data-target="photography">ফটোগ্রাফি</span>
+
+  <span class="filter-item text english showText" data-target="UI-Designs">Ui Designs</span>
+  <span class="filter-item text bangla hideText" data-target="UI-Designs">ইউ-আই ডিজাইন</span>
+
+  <span class="filter-item text english showText" data-target="e-commerce">E-Commerce</span>
+  <span class="filter-item text bangla hideText" data-target="e-commerce">ই-কমার্স</span>
+
+  <span class="filter-item text english showText" data-target="mobile-app">Mobile App</span>
+  <span class="filter-item text bangla hideText" data-target="mobile-app">মোবাইল অ্যাপ্লিক্যাশন</span>
 </div>
 </div>
 <!--Portfolio filter.end-->
@@ -570,7 +824,7 @@ window.onload = function() {
 <!--Portfolio items.start-->
 <div class="row portfolio-items">
 
-  <div class="portfolio-item" data-category="web-application"> 
+  <div class="portfolio-item text english showText" data-category="web-application"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-1.jpg" alt="portfolio image"
@@ -583,20 +837,61 @@ window.onload = function() {
         >
         <span class="view-project">view project</span>
       </div>
-      <p class="portfolio-item-title">personal portfolio</p>
+      <p class="portfolio-item-title">UTSA Official</p>
+      <p>category - <span class="pp-project-category">Web-site</span></p>
+
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, we are hiding in italia..la la la lla lla laaaa voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p><b>U.T.S.A.BD Official Website
+          </b>This would be the Official website of our beloved Utined Tea Student Association Bangladesh .The date of built was :20/12/20.This website has programed with a rigoures ammount of Backend facilites Using NodeJS , designed with REACT,BOOTSTRAP,AOS and authenticed by FIREBASE</p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>Date - <span>20-12-20</span></li>
+                <li>client - <span></span>UTSA Authority</li>
+                <li>tools - <span></span>NodeJS , REACT , BOOTSTRAP , AOS & FIREBASEt</li>
+                <li>web - <span><a href="#">http://utsabd-official-website.web.app/</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="portfolio-item text bangla hideText" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-1.jpg" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-1/1.png,
+        img/portfolio/large/project-1/2.png,
+        img/portfolio/large/project-1/3.png,
+        img/portfolio/large/project-1/4.png,
+        img/portfolio/large/project-1/5.png,
+        img/portfolio/large/project-1/6.png"
+        >
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
+      </div>
+      <p class="portfolio-item-title">বাংলাদেশ বিশ্ববিদ্যালয় চা ছাত্র পরিষদ অফিসিয়াল
+      </p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ওয়েবসাইট</span></p>
+
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>Project Brief:</h3>  
+          <p>
+            বাংলাদেশ বিশ্ববিদ্যালয় চা ছাত্র পরিষদ  অফিসিয়াল ওয়েবসাইট
+এটি আমাদের প্রিয় ইউনাইনেড টি স্টুডেন্ট অ্যাসোসিয়েশন বাংলাদেশের অফিসিয়াল ওয়েবসাইট হবে। নির্মাণের তারিখ ছিল: 20/12/20। এই ওয়েবসাইটটি NodeJS ব্যবহার করে ব্যাকএন্ড সুবিধার একটি কঠোর পরিমাণে প্রোগ্রাম করছে, যা REACT, BOOTSTRAP, AOS এবং অনুমোদিত ফায়ারবেস দ্বারা
+          </div>
+            <div class="info">
+              <h3>Project info</h3>  
+              <ul>
+                <li>Date - <span>20-12-20</span></li>
+                <li>client - <span></span>UTSA Authority</li>
+                <li>সরঞ্জামাদি - <span></span>  বুটস্ট্র্যাপ, রিয়েক্ট , রেস্ট এপিআই , অ্যানিমেট অন স্ক্রল , ফায়ারবেস
+                  <li>web - <span><a href="#">http://utsabd-official-website.web.app/</a></span></li>
               </ul>
             </div>
         </div>
@@ -604,7 +899,8 @@ window.onload = function() {
     </div>
   </div> 
 
-  <div class="portfolio-item " data-category="web-application"> 
+
+  <div class="portfolio-item text english showText" data-category="web-application"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-2.png" alt="portfolio image"
@@ -612,20 +908,60 @@ window.onload = function() {
         >
         <span class="view-project">view project</span>
       </div>
-      <p class="portfolio-item-title">personal portfolio</p>
+      <p class="portfolio-item-title">BRMC Initial Website</p>
+      <p>category - <span class="pp-project-category">Web-site</span></p>
+    
+      
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adi jupiter urenas kfishf idid baj bji abaksij sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p>  <b>BRMC-initial-Website</b>
+            I built this website for official uses of my own College,but due to funding issues this has not been deployed yer officially .The date of built was :11/01/21.This website has programed with a mega ammount of Backend facilites Using NodeJS , designed with REACT,TAILWIND,BOOTSTRAP,AOS and authenticed by FIREBASE
+            </p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>তারিখ - <span>01-01-2021</span></li>
+                <li>গ্রাহক - <span></span>BRMC authority</li>
+                <li>সরঞ্জামাদি - <span></span>NodeJS ,MognoDB ,Express ,Nodemon , REACT,TAILWIND,BOOTSTRAP,AOS and authenticed by FIREBASE</li>
+                <li>লিঙ্ক - <span><a href="#">brmc-official.web.app</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="portfolio-item text bangla hideText" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-2.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-2/1.png"
+        >
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
+      </div>
+      <p class="portfolio-item-title">বিআরেমসি ইনিশিয়াল ওয়েবসাইট
+      </p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ওয়েবসাইট</span></p>
+
+      
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+            <h3>প্রজেক্ট বিবরণ :</h3>  
+            <p>  <b>বিআরেমসি ইনিশিয়াল ওয়েবসাইট</b>
+            আমি আমার নিজস্ব কলেজের অফিসিয়াল ব্যবহারের জন্য এই ওয়েবসাইটটি তৈরি করেছি, কিন্তু তহবিলের সমস্যার কারণে এটি আনুষ্ঠানিকভাবে মোতায়েন করা হয়নি। নির্মাণের তারিখ ছিল: 01-01-2021 , রিয়েক্ট , টেইলউইন্ড, বুটস্ট্র্যাপ, রেস্ট এপিআই , অ্যানিমেট অন স্ক্রল দিয়ে ডিজাইন করা হয়েছে এবং ফায়ারবেস দ্বারা সুরক্ষিত
+               </p>
+          </div>
+            <div class="info">
+              <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
+              <ul>
+                <li>তারিখ - <span>০১-০১-২০২১</span></li>
+                <li>গ্রাহক - <span></span>দি বাডস রেসিডেনসিয়াল মডেল  কলেজ , কর্তৃপক্ষ</li>
+                <li>সরঞ্জামাদি - <span></span> টেইলউইন্ড , বুটস্ট্র্যাপ, রিয়েক্ট , রেস্ট এপিআই , অ্যানিমেট অন স্ক্রল , ফায়ারবেস
+                </li>
+                <li>লিঙ্ক - <span><a href="#">http://brmc-official.web.app/</a></span></li>
               </ul>
             </div>
         </div>
@@ -633,8 +969,7 @@ window.onload = function() {
     </div>
   </div> 
 
-
-   <div class="portfolio-item" data-category="web-application"> 
+   <div class="portfolio-item text english showText" data-category="web-application"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-3.png" alt="portfolio image"
@@ -643,12 +978,17 @@ window.onload = function() {
         >
         <span class="view-project">view project</span>
       </div>
-      <p class="portfolio-item-title">personal portfolio</p>
+      <p class="portfolio-item-title">BCJAF Official Website</p>
+      <p>category - <span class="pp-project-category">Web-site</span></p>
+
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p> <b>BCJAF Official Website</b> 
+            This would be the Official website of our beloved Bangladesh Cha Jonogoshti Adibashi Front.The date of built was :22/02/21.This website has impletmented by a rigoures ammount of Backend facilites Using NodeJS ,MONGODB ,FIREBASE ,REACT,BOOTSTRAP,WAVES.IO,AOS
+            
+            </p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
@@ -656,14 +996,51 @@ window.onload = function() {
                 <li>Date - <span>2021</span></li>
                 <li>client - <span></span>xyz</li>
                 <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>web - <span><a href="#">https://bcjaf-official.web.app/</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-item text bangla hideText" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-3.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-3/1.png,
+        img/portfolio/large/project-3/2.png"
+        >
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
+      </div>
+      <p class="portfolio-item-title">বিসিজেএএফ অফিসিয়াল ওয়েবসাইট
+      </p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ওয়েবসাইট</span></p>
+
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>প্রজেক্ট বিবরণ :</h3>  
+          <p>
+            <b> বাচাজআফ অফিসিয়াল ওয়েবসাইট </b>
+             এটি হবে আমাদের প্রিয় বাংলাদেশ চা জনগোষ্ঠী আদিবাসী ফ্রন্টের অফিসিয়াল ওয়েবসাইট। নির্মাণের তারিখ ছিল: 22/02/21
+           </p>
+          </div>
+            <div class="info">
+              <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
+              <ul>
+                <li>তারিখ - <span>৩১-১-২০২১</span></li>
+                <li>গ্রাহক - <span></span>বাংলাদেশ চা জনগোষ্ঠী আদিবাসি ফ্রন্ট </li>
+                <li>সরঞ্জামাদি - <span></span>এইচটিএমএল, সিএসএস, জাভাস্ক্রিপ্ট, বুটস্ট্র্যাপ, রিয়েক্ট , রেস্ট এপিআই , অ্যানিমেট অন স্ক্রল
+                </li>
+                <li>লিঙ্ক - <span><a href="#">https://bcjaf-official.web.app/</a></span></li>
               </ul>
             </div>
         </div>
       </div>
     </div>
   </div> 
-  <div class="portfolio-item" data-category="web-application"> 
+  
+  <div class="portfolio-item text english showText" data-category="web-application"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-4.png" alt="portfolio image"
@@ -671,27 +1048,64 @@ window.onload = function() {
         >
         <span class="view-project">view project</span>
       </div>
-      <p class="portfolio-item-title">personal portfolio</p>
+      <p class="portfolio-item-title">E-Commerce Portfolio
+      </p>
+      <p>category - <span class="pp-project-category">Web-site</span></p>
+
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p>as a quick Response to the request of a big brother I had to build this website in just 3 days.Note: This website has more than 14 pages & there is a chance that I can make it if I get responsibility of uprgrading this website to Dynamic</p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>Date - <span>06-02-2021</span></li>
+                <li>client - <span></span>MD Mostakin Rabbi</li>
+                <li>tools - <span></span>HTML, CSS, Bootstrap ,React , Slider</li>
+                <li>web - <span><a href="#">plastile.web.app</a></span></li>
               </ul>
             </div>
         </div>
       </div>
     </div>
   </div> 
-  <div class="portfolio-item" data-category="web-application"> 
+  <div class="portfolio-item text bangla hideText" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-4.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-4/1.jpg"
+        >
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
+      </div>
+      <p class="portfolio-item-title">ই-কমার্স পোর্টফোলিও</p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ওয়েবসাইট</span></p>
+
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>প্রজেক্ট বিবরণ :</h3>  
+          <p>এক বড় ভাইয়ের অনুরোধের দ্রুত প্রতিক্রিয়া হিসাবে আমাকে মাত্র 3 দিনের মধ্যে এই ওয়েবসাইটটি তৈরি করতে হয়েছিল। আমি এটিকে পূর্ণ-স্ট্যাকে আপগ্রেড করতে পারি কিছুদিনের মধ্যেই যদি এর জন্য সাড়া পাই
+        </p>
+          </div>
+            <div class="info">
+              <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
+              <ul>
+                <li>তারিখ - <span>06-02-২০২১</span></li>
+                <li>গ্রাহক - <span></span>মোহাম্মদ মোস্তাকিন রাব্বি </li>
+                <li>সরঞ্জামাদি - <span></span>এইচটিএমএল, সিএসএস, জাভাস্ক্রিপ্ট, বুটস্ট্র্যাপ, রিয়েক্ট ,স্লাইডার
+                </li>
+                <li>লিঙ্ক - <span><a href="#">plastile.web.app</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+  <div class="portfolio-item text english showText" data-category="web-application"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-5.jpg" alt="portfolio image"
@@ -701,19 +1115,54 @@ window.onload = function() {
         <span class="view-project">view project</span>
       </div>
       <p class="portfolio-item-title">personal portfolio</p>
+      <p>category - <span class="pp-project-category">Web-site</span></p>
+
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p>This is my official website.Made with love and by using theese tools:HTML,CSS, JavaScript,Bootstrap,Node,Express & Tailwind</p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>Date - <span>24-04-2021</span></li>
+                <li>client - <span></span>For Me</li>
+                <li>tools - <span></span>HTML,CSS, JavaScript,Bootstrap,Node,Express & Tailwind</li>
+                <li>Web - <span><a href="#">shuvokoiriofficial.netllify.app</a></span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+<div class="portfolio-item text bangla hideText" data-category="web-application"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-5.jpg" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-5/1.png,
+        img/portfolio/large/project-5/2.png"
+        >
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
+      </div>
+      <p class="portfolio-item-title">অফিশিয়াল ওয়েবসাইট</p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ওয়েবসাইট</span></p>
+
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>প্রজেক্ট বিবরণ :</h3>  
+          <p>এটি আমার অফিসিয়াল ওয়েবসাইট। ভালবাসা দিয়ে এবং এই সরঞ্জামগুলি ব্যবহার করে তৈরি করুন: এইচটিএমএল, সিএসএস, জাভাস্ক্রিপ্ট, বুটস্ট্র্যাপ, নোড, এক্সপ্রেস এবং টেইলউইন্ড
+          </p>
+          </div>
+            <div class="info">
+              <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
+              <ul>
+                <li>তারিখ - <span>২৪-০৪-২০২১</span></li>
+                <li>গ্রাহক - <span></span>নিজের জন্য </li>
+                <li>সরঞ্জামাদি - <span></span>এইচটিএমএল, সিএসএস, জাভাস্ক্রিপ্ট, বুটস্ট্র্যাপ, নোড, এক্সপ্রেস এবং টেইলউইন্ড
+                </li>
+                <li>লিঙ্ক - <span><a href="#">shuvokoiriofficial.netllify.app</a></span></li>
               </ul>
             </div>
         </div>
@@ -722,7 +1171,7 @@ window.onload = function() {
   </div> 
 
 
-   <div class="portfolio-item" data-category="UI-Designs"> 
+   <div class="portfolio-item text english showText" data-category="UI-Designs"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-6.png" alt="portfolio image"
@@ -731,28 +1180,62 @@ window.onload = function() {
         >
         <span class="view-project">view project</span>
       </div>
-      <p class="portfolio-item-title">personal portfolio</p>
+      <p class="portfolio-item-title">Blood-Bank Website</p>
+      <p>category - <span class="pp-project-category">UI-Designs</span></p>
+
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p>This is a design of my upcoming blood bank project.Which willbe totally full-stacked and dynamic..In this web site every kind of Auth and CURD operation will be performed .so yeah,it took a lot to get designed and will still be taking a lot to get developed.</p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>Date - <span>5-08-2021</span></li>
+                <li>client - <span></span>Prokash Singha</li>
+                <li>tools - <span></span>Figma</li>
+                <li>web - <span><a href="#">Unuploaded</a></span></li>
               </ul>
             </div>
         </div>
       </div>
     </div>
   </div> 
+  <div class="portfolio-item text bangla hideText" data-category="UI-Designs"> 
+    <div class="portfolio-item-inner outer-shadow">
+      <div class="porfolio-item-img">
+        <img class="bugS" src="img/portfolio/thumb/project-6.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-6/1.png,
+        img/portfolio/large/project-6/2.png"
+        >
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
+      </div>
+      <p class="portfolio-item-title">ব্লাড ব্যাঙ্ক ওয়েবসাইট
+      </p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ইউ-আই ডিজাইন</span></p>
 
-   <div class="portfolio-item" data-category="UI-Designs"> 
+      <div class="portfolio-item-details">
+        <div class="row">
+          <div class="description">
+          <h3>প্রজেক্ট বিবরণ :</h3>  
+          <p>এটি আমার আসন্ন ব্লাড ব্যাঙ্ক প্রকল্পের  নকশা । যা সম্পূর্ণরূপে পূর্ণাঙ্গ এবং গতিশীল হবে । এই ওয়েব সাইটে প্রতিটি ধরনের AUTH এবং CURD অপারেশন করা হবে। </p>
+          </div>
+                <div class="info">
+                  <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
+                  <ul>
+                    <li>তারিখ - <span>০৫/০৮/২০২১</span></li>
+                    <li>গ্রাহক - <span></span>প্রকাশ সিংহ</li>
+                    <li>সরঞ্জামাদি - <span></span>ফিগমা</li>
+                    <li>লিঙ্ক - <span><a href="#">আপলোড করা হয়নি</a></span></li>
+                  </ul>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+   <div class="portfolio-item text english showText" data-category="UI-Designs"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
         <img class="bugS" src="img/portfolio/thumb/project-7.png" alt="portfolio image"
@@ -760,89 +1243,196 @@ window.onload = function() {
         img/portfolio/large/project-7/2.png"
         >
         <span class="view-project">view project</span>
+
       </div>
-      <p class="portfolio-item-title">personal portfolio</p>
+      <p class="portfolio-item-title">Design freak studios</p>
+      <p>category - <span class="pp-project-category">UI-Designs</span></p>
+
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
           <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <p>This is the most beutiful design I have did so far in figma I guess</p>
           </div>
             <div class="info">
               <h3>Project info</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.namkawaste.com</a></span></li>
+                <li>Date - <span>04.08.2021</span></li>
+                <li>client - <span></span>made for practice</li>
+                <li>tools - <span></span>Figma</li>
+                <li>Link - <span><a href="#">Unuploaded</a></span></li>
               </ul>
             </div>
         </div>
       </div>
     </div>
   </div> 
-
-
- <div class="portfolio-item" data-category="photography"> 
+  <div class="portfolio-item text bangla hideText" data-category="UI-Designs"> 
     <div class="portfolio-item-inner outer-shadow">
       <div class="porfolio-item-img">
-        <img class="bugS " height="210px" src="https://scontent.fdac65-1.fna.fbcdn.net/v/t1.15752-9/240888455_849477089289759_4338377341482843482_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFI_GKxuq2TP7YJyo9qklfkIzTDuBvyHhMjNMO4G_IeE8KZ4pnZnKfITQDljXcpBYEk8jnhCMS_dze_Dg4JaFA_&_nc_ohc=M-Qlf8EfocYAX_Nes3J&_nc_ht=scontent.fdac65-1.fna&oh=e7538ada9a2abe37388f54c3a9ddb866&oe=6154F6D2" alt="portfolio image"
-        data-screenshots="img/portfolio/large/project-1/1.png,
-        img/portfolio/large/project-8/2.png,"
+        <img class="bugS" src="img/portfolio/thumb/project-7.png" alt="portfolio image"
+        data-screenshots="img/portfolio/large/project-7/1.png,
+        img/portfolio/large/project-7/2.png"
         >
-        <span class="view-project">view project</span>
+        <span class="view-project">প্রজেক্টটা দেখুন</span>
       </div>
-      <p class="portfolio-item-title"></p>
+      <p class="portfolio-item-title">ডিজাইন ফ্রিক স্টুডিওজ  </p>
+      <p>ক্যাটাগরি - <span class="pp-project-category">ইউ-আই ডিজাইন</span></p>
+
+      <!-- <p>ক্যাটাগরি - <span class="pp-project-category">ওয়েবসাইট</span></p> -->
       <div class="portfolio-item-details">
         <div class="row">
           <div class="description">
-          <h3>Project Brief:</h3>  
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
+          <h3>প্রজেক্ট বিবরণ :</h3>  
+          <p>ফিগমা দিয়ে করা সম্ভবত আমার সবচেয়ে সুন্দর ডিজাইন</p>
           </div>
             <div class="info">
-              <h3>Project info</h3>  
+              <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
               <ul>
-                <li>Date - <span>2021</span></li>
-                <li>client - <span></span>xyz</li>
-                <li>tools - <span></span>HTML, CSS, JavaScript</li>
-                <li>web - <span><a href="#">www.nakajima.com</a></span></li>
+                <li>তারিখ - <span>০৪/০৭/২০২১</span></li>
+                <li>গ্রাহক - <span></span>নিজের জন্য করা</li>
+                <li>সরঞ্জামাদি - <span></span>ফিগমা</li>
+                <li>লিঙ্ক - <span><a href="#">আপলোড করা হয়নি</a></span></li>
               </ul>
             </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
   
-  
- <div class="portfolio-item" data-category="photography"> 
+
+
+<div class="portfolio-item text english showText" data-category="photography"> 
   <div class="portfolio-item-inner outer-shadow">
     <div class="porfolio-item-img">
-      <img class="bugS " height="210px" src="img/portfolio/thumb/project-9.jpg" alt="portfolio image"
+      <img class="bugS " height="210px" src="img/portfolio/thumb/project-9.jpg"alt="portfolio image"
       data-screenshots="img/portfolio/large/project-1/1.png,
       img/portfolio/large/project-8/2.png,"
       >
       <span class="view-project">view project</span>
     </div>
-    <p class="portfolio-item-title"></p>
+    <p class="portfolio-item-title">Godhuli Logne</p>
+    <p>category - <span class="pp-project-category">Photography</span></p>
+
     <div class="portfolio-item-details">
       <div class="row">
         <div class="description">
         <h3>Project Brief:</h3>  
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptas sunt fugiat, qui tempore eaque quaerat nisi mollitia laborum totam nulla natus in corrupti ratione quod maiores? Modi, perspiciatis magni.</p>
         </div>
+        <div class="info">
+          <h3>Project Info</h3>  
+          <ul>
+            <li>Date - <span>04-09-2021</span></li>
+            <li>Client - <span></span>Made for me</li>
+            <li>Tosls - <span></span>Samsung galaxy M20</li>
+            <li>Link - <span><a href="#">Unuploaded</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="portfolio-item text bangla hideText" data-category="photography"> 
+  <div class="portfolio-item-inner outer-shadow">
+    <div class="porfolio-item-img">
+      <img class="bugS " height="210px" src="img/portfolio/thumb/project-9.jpg"  alt="portfolio image"
+      data-screenshots="img/portfolio/large/project-1/1.png"
+      >
+      <span class="view-project">প্রজেক্টটা দেখুন</span>
+    </div>
+    <p class="portfolio-item-title">গোধূলি লগ্নে </p>
+    <p>ক্যাটাগরি - <span class="pp-project-category">ফটোগ্রাফি</span></p>
+
+    <div class="portfolio-item-details">
+      <div class="row">
+        <div class="description">
+        <h3>প্রজেক্ট বিবরণ : </h3>  
+        <p>গোধূলি লগ্নে...পুকুরপাড়ে
+        </p>
+        </div>
           <div class="info">
-            <h3>Project info</h3>  
+            <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
             <ul>
-              <li>Date - <span>2021</span></li>
-              <li>client - <span></span>xyz</li>
-              <li>tools - <span></span>HTML, CSS, JavaScript</li>
-              <li>web - <span><a href="#">www.nakajima.com</a></span></li>
+              <li>তারিখ - <span>০৪/০৯/২০২১</span></li>
+              <li>গ্রাহক - <span></span>নিজের জন্য করা</li>
+              <li>সরঞ্জামাদি - <span></span>স্যামসাং গ্যালাক্সি এম২০</li>
+              <li>লিঙ্ক - <span><a href="#">আপলোড করা হয়নি</a></span></li>
             </ul>
           </div>
       </div>
     </div>
   </div>
 </div>
+
+
+    
+<div class="portfolio-item text english showText" data-category="photography"> 
+  <div class="portfolio-item-inner outer-shadow">
+    <div class="porfolio-item-img">
+      <img class="bugS " height="210px" src="https://scontent.fdac65-1.fna.fbcdn.net/v/t1.15752-9/240888455_849477089289759_4338377341482843482_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFI_GKxuq2TP7YJyo9qklfkIzTDuBvyHhMjNMO4G_IeE8KZ4pnZnKfITQDljXcpBYEk8jnhCMS_dze_Dg4JaFA_&_nc_ohc=M-Qlf8EfocYAX_Nes3J&_nc_ht=scontent.fdac65-1.fna&oh=e7538ada9a2abe37388f54c3a9ddb866&oe=6154F6D2" alt="portfolio image"
+      data-screenshots="img/portfolio/large/project-1/1.png"
+      >
+      <span class="view-project">View Project</span>
+    </div>
+
+    <p class="portfolio-item-title">cement surface</p>  
+    <p>category - <span class="pp-project-category">Photography</span></p>
+ 
+    
+    <div class="portfolio-item-details">
+      <div class="row">
+        <div class="description">
+        <h3>Project Brief : </h3>  
+        <p>This is a photo of a cement surface , using of 4x zoom power of my camera made it so unrecognizable
+        </p>
+        </div>
+          <div class="info">
+            <h3>Project Info</h3>  
+            <ul>
+              <li>Date - <span>04-09-2021</span></li>
+              <li>Client - <span></span>Made for me</li>
+              <li>Tosls - <span></span>Samsung galaxy M20</li>
+              <li>Link - <span><a href="#">Unuploaded</a></span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="portfolio-item text bangla hideText" data-category="photography"> 
+  <div class="portfolio-item-inner outer-shadow">
+    <div class="porfolio-item-img">
+      <img class="bugS " height="210px" src="https://scontent.fdac65-1.fna.fbcdn.net/v/t1.15752-9/240888455_849477089289759_4338377341482843482_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFI_GKxuq2TP7YJyo9qklfkIzTDuBvyHhMjNMO4G_IeE8KZ4pnZnKfITQDljXcpBYEk8jnhCMS_dze_Dg4JaFA_&_nc_ohc=M-Qlf8EfocYAX_Nes3J&_nc_ht=scontent.fdac65-1.fna&oh=e7538ada9a2abe37388f54c3a9ddb866&oe=6154F6D2" alt="portfolio image"
+      data-screenshots="img/portfolio/large/project-1/1.png"
+      >
+      <span class="view-project">প্রজেক্টটা দেখুন</span>
+
+    </div>
+    <p class="portfolio-item-title">সিরামিক সারফেস</p>
+          <p>ক্যাটাগরি - <span class="pp-project-category">ফটোগ্রাফি</span></p>
+
+    <div class="portfolio-item-details">
+      <div class="row">
+        <div class="description">
+        <h3>প্রজেক্ট বিবরণ : </h3>  
+        <p>সিরামিকের পুরোনো সারফেস.....ক্যামেরার 4x জুম কোয়ালিটি ব্যাবহার করে তোলা</p>
+        </div>
+          <div class="info">
+            <h3>প্রজেক্ট সম্পরকিত তথ্য</h3>  
+            <ul>
+              <li>তারিখ - <span>০৪/০৯/২০২১</span></li>
+              <li>গ্রাহক - <span></span>নিজের জন্য করা</li>
+              <li>সরঞ্জামাদি - <span></span>স্যামসাং গ্যালাক্সি এম২০</li>
+              <li>লিঙ্ক - <span><a href="#">আপলোড করা হয়নি</a></span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </div>
 </div>
@@ -941,12 +1531,16 @@ window.onload = function() {
 
 <!--Style switcher.end-->
 
+
+
+
 <!--Testimonial.start-->
 <section class="testimonial-section section " id="Testimonial">
   <div class="container">
       <div class="row">
         <div class="section-title">
-          <h2 data-heading="testimonial">Client Speak</h2>
+          <h2 class="text english showText" data-heading="testimonial">Client Speak</h2>
+          <h2 class="text bangla hideText" data-heading="প্রসংশাপত্র">ক্লায়েন্টদের কথা</h2>
         </div>
     </div>
     <div class="row">
@@ -954,44 +1548,84 @@ window.onload = function() {
         <div class="testi-slider outer-shadow ">
         <div class="testi-slider-container ">
 
-          <div class="testi-item active">
+          <div class="testi-item active ">
             <i class="fas fa-quote-left left"></i>
             <i class="fas fa-quote-right right"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
+            <p class="text english showText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
+            <p class="text bangla hideText">আমাকে আমার মত থাকতে দাও
+              আমি নিজেকে নিজের মত গুছিয়ে নিয়েছি
+              আমাকে আমার মত থাকতে দাও
+              আমি নিজেকে নিজের মত গুছিয়ে নিয়েছি
+              যেটা ছিলোনা ছিলোনা সেটা না পাওয়াই থাক
+              সব পেলে নষ্ট জীবন
+              তোমার এই দুনিয়ার ঝাপসা আলোর
+              কিছু সন্ধ্যের গুড়ো হওয়া কাচের মত
+              যদি উড়ে যেতে চাও তবে গা ভাসিয়ে দাও
+              দূরবীণে চোখ রাখবো না-না-না
+              না-না-না-না, না-না-না-না</p>
             <img src="img/testimonial/1.png" alt="testimonial">
-            <span>Lasith Malinga</span>
+            <span class="text english showText">Lasith Malinga</span>
+            <span class="text bangla hideText">লাসিথ মালিঙ্গা</span>
           </div>
 
         <div class="testi-item ">
             <i class="fas fa-quote-left left" ></i>
             <i class="fas fa-quote-right right"></i>
-            <p>gujar jaye din din din ..ye har pall gin gin gin..kisike hain yaad o main..kisike hay baaton main...jabse chale khwab mere hay ho gye rangiiiin...gujar jaye din din din</p>
+            <p class="text english showText">gujar jaye din din din ..ye har pall gin gin gin..kisike hain yaad o main..kisike hay baaton main...jabse chale khwab mere hay ho gye rangiiiin...gujar jaye din din din</p>
+            <p class=" text bangla hideText">এই জাহাজ মাস্তুল ছারখার
+              তবু গল্প লিখছি বাঁচবার
+              আমি রাখতে চাইনা আর তার
+              কোনো রাত-দূপুরের আবদার
+              তাই চেষ্টা করছি বারবার
+              সাঁতরে পাড় খোঁজার
+              কখনো আকাশ বেয়ে চুপ করে
+              যদি নেমে আসে ভালবাসা খুব ভোরে
+              চোখ ভাঙ্গা ঘুমে তুমি খুঁজোনা আমায়
+              আশেপাশে আমি আর নেই
+              আমার জন্য আলো জ্বেলনা কেউ
+              আমি মানুষের সমুদ্রে গুনেছি ঢেউ
+              এই স্টেশনের চত্বরে হারিয়ে গেছি
+              শেষ ট্রেনে ঘরে ফিরবো না-না-না
+              না-না-না-না, না-না-না-না</p>
             <img src="img/testimonial/1.png" alt="testimonial">
-            <span>Kumara Sangakara</span>
-          </div> 
-              <div class="testi-item">
+            <span class="text english showText">Kumara Sangakara</span>
+            <span class="text bangla hideText">কুমারা সাঙ্গাকারা</span>
+          </div>   
+        
+        
+              <div class="testi-item ">
             <i class="fas fa-quote-left left"></i>
             <i class="fas fa-quote-right right"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequn Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas impedit ut?t.</p>
+            <p class="text english showText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequn Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptas impedit ut?t.</p>
+            <p class="text bangla hideText">এই জাহাজ মাস্তুল ছারখার
+              তবু গল্প লিখছি বাঁচবার
+              আমি রাখতে চাইনা আর তার
+              কোনো রাত-দূপুরের আবদার
+              তাই চেষ্টা করছি বারবার
+              সাঁতরে পাড় খোঁজার
+              না... না-না-না-না না, না-না-না-না না, না-না-না-না
+              না... না-না-না-না না, না-না-না-না না, না-না-না-না
+              তোমার রক্তে আছে স্বপ্ন যত
+              তাঁরা ছুটছে রাত্রি-দিন নিজের মত
+              কখনো সময় পেলে একটু ভেবো
+              আঙুলের ফাঁকে আমি কই!
+              হিসেবের ভিড়ে আমি চাইনা ছুঁতে
+              যত শুকনো পেয়াজ কলি ফ্রিজের শীতে
+              আমি ওবেলার ডাল-ভাতে ফুরিয়ে গেছি
+              গেলাসের জলে ভাসবো না-না-না
+              না-না-না-না, না-না-না-না
+              এই জাহাজ মাস্তুল ছারখার
+              তবু গল্প লিখছি বাঁচবার
+              আমি রাখতে চাইনা আর তার
+              কোনো রাত-দূপুরের আবদার
+              তাই চেষ্টা করছি বারবার
+              সাঁতরে পাড় খোঁজার</p>
             <img src="img/testimonial/1.png" alt="testimonial">
-            <span>thisara perrera</span>
+            <span class=" text english showText">thisara perrera</span>
+            <span class="text bangla hideText">থিসারা পেরেরা</span>
           </div> 
 
-       <!--   <div class="testi-item">
-            <i class="fas fa-quote-left left"></i>
-            <i class="fas fa-quote-right right"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
-            <img src="img/testimonial/1.png" alt="testimonial">
-            <span>thisara perrera</span>
-          </div>
-          
-          <div class="testi-item">
-            <i class="fas fa-quote-left left"></i>
-            <i class="fas fa-quote-right right"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos suscipit quod culpa doloribus odit, praesentium, dicta consequatur magnam ex accusamus doloremque sequi accusantium exercitationem. Eligendi mollitia a facilis blanditiis deserunt.</p>
-            <img src="img/testimonial/1.png" alt="testimonial">
-            <span>thisara perrera</span>
-          </div> -->
+
         </div>
       </div>
       <div class="testi-slider-nav">
@@ -1011,7 +1645,8 @@ window.onload = function() {
   <div class="container">
     <div class="row">
       <div class="section-title">
-        <h2 data-heading="contact">Get in Touch</h2>
+        <h2 class=" text english showText" data-heading="contact">Get in Touch</h2>
+        <h2 class=" text bangla hideText" data-heading="যোগাযোগ">সাথে রাখার প্রয়াস</h2>
       </div>
     </div>
     <div class="row ">
@@ -1020,24 +1655,34 @@ window.onload = function() {
       <div class="contact-item  ">
         <div class="contact-item-inner outer-shadow">
           <i class="fas fa-phone"></i>
-          <span>Phone</span>
-          <p>01791310785</p>
+          <span class="text english showText">Phone</span>
+          <p class="text english showText">01791310785</p>
+
+          <span class="text bangla hideText">ফোন নাম্বার</span>
+          <p class="text bangla hideText">01791310785</p>
         </div>
       </div>
 
       <div class="contact-item ">
         <div class="contact-item-inner outer-shadow">
           <i class="fas fa-envelope"></i>
-          <span>E-mail</span>
-          <p>shuvokoiri89@gmail.com</p>
+          <span class="text english showText">E-mail</span>
+          <p class="text english showText">shuvokoiri89@gmail.com</p>
+          
+          <span class="text bangla hideText">ই-মেইল</span>
+          <p class="text bangla hideText">শুভকৈরী৮৯@জিমেইল.কম</p>
         </div>
       </div>
 
       <div class="contact-item">
         <div class="contact-item-inner outer-shadow">
           <i class="fas fa-location-arrow"></i>
-          <span>Address</span>
-          <p>south double line,Sathgaon Tea Estate</p>
+          <span class="text english showText">Address</span>
+          <p class="text english showText">south double line,Sathgaon Tea Estate</p>
+          
+          <span class="text bangla hideText">ঠিকানা</span>
+          <p class="text bangla hideText">দক্ষিণ ডাবল লাইন , সাতগাঁও চা বাগান
+          </p>
         </div>
       </div>
 
@@ -1057,43 +1702,54 @@ window.onload = function() {
 <div class="W-50">
 
   <div class="input-group outer-shadow hover-in-shadow">
-    <input type="text" placeholder="name" id="name"name="name" class="input-control"/>
+    <input type="text" placeholder="name" id="name"name="name" class="input-control text english showText"/>
+    <input type="text" placeholder="আপনার নাম" id="name"name="name" class="input-control text bangla hideText"/>
   </div>
   
   <div class="input-group outer-shadow hover-in-shadow">
-    <input type="email" placeholder="Email Address" name="email" class="input-control" required/>
+    <input type="email" placeholder="Email Address" name="email" class="input-control text english showText" required/>
+    <input type="email" placeholder=" ই-মেইল অ্যাড্রেস " name="email" class="input-control text bangla hideText" required/>
   </div>
-
   
-  <input type="hidden" name="_next" value="https://shuvoskywalkar.github.io/Shuvo_Koiri_Secondary/Pages/thanks.html">
-  <input type="hidden" name="_subject" value="Boss!! ekjon statement dise afnare.দ্যাখেন....">
+  <input type="hidden" name="_next" value="https://shuvokoiri.netlify.app/Pages/thanks.html">
+  <input type="hidden" name="_subject" value=" Boss!! ekjon statement dise....দ্যাখেন.... ">
   <input type="hidden" name="_template" value="table">
 
-
-
-  <input type="hidden" name="_autoresponse" value="Thank You for investing your valuabe time & opinion for me...Wish you a very good day . ">
-  
-
-
-
+  <input type="hidden" class="text english showText" name="_autoresponse" value=" Thank You for investing your valuabe time & opinion for me...Wish you a very good day . If you have messeged me for an important work then be sure that I will be replying you verry soon .  ">
+  <input type="hidden" class="text bangla hideText" name="_autoresponse" value=" ধন্যবাদ হে মুল্যবান মানুষ;নিজের মুল্যবান সময় ও মতামত আমার উপর বিনিয়োগ করার জন্য। ভালো থাকুন,সাথে থাকুন...জরুরী কোনো কাজের জন্য মেসেজটা দিয়ে থাকলে আমি শীঘ্রই রিপ্লাই দিবো......  ">
 
   <div class="input-group outer-shadow hover-in-shadow">
-    <input type="text" placeholder="Subject" class="input-control"/>
+    <input type="text" placeholder="Subject" class="input-control text english showText"/>
+    <input type="text" placeholder="বিষয় " class="input-control text bangla hideText"/>
   </div>
 
 </div>
-<div class="W-50">
-  <div class="input-group hover-in-shadow outer-shadow">
-    <textarea placeholder="Messege/Review" name="messege" class="input-control" ></textarea>
+
+
+<div class="W-50 ">
+  <div class="input-group hover-in-shadow outer-shadow ">
+    <textarea placeholder="Messege/Review" name="messege" class="input-control text english showText" ></textarea>
+    <textarea placeholder="ম্যাসেজ/রিভিঊ" name="messege" class="input-control text bangla hideText" ></textarea>
   </div>
+  
+  </div>
+<!-- <div class="w-50 text bangla hideText">
+  <div class="input-group hover-in-shadow outer-shadow ">
+    <textarea placeholder="ম্যাসেজ/রিভিঊ" name="messege" class="input-control" ></textarea>
+  </div>
+</div> -->
+
 </div>
-        </div>
         <div class="row">
           <div class="submit-btn">
-            <buttton onclick="formSubmit()"  type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Messege</buttton>
+            <buttton onclick="formSubmit()"  type="submit" class="btn-1 outer-shadow hover-in-shadow ">
+              <span class="text english showText">Send Messege</span>
+              <span class="text bangla hideText">পাঠিয়ে দিন</span>
+              </buttton>
           </div>
         </div>
       </form>
+      </div>
     </div>
   </div>
 </div>

@@ -3,7 +3,10 @@
    .service-section .service-item{
        flex: 0 0 50%;
        max-width: 50%;
-   } 
+   }
+   .penIcon{
+    font-size: xx-large;
+} 
 }
 
 @media (max-width:767px) {
@@ -24,6 +27,9 @@
 .home-section .home-text{
     order: 2;
 }   
+.penIcon{
+    font-size: xx-large;
+}
 .logo,
 .contact-section .submit-btn,
 .home-section .home-text{
