@@ -1446,13 +1446,17 @@ text-transform: capitalize;
       opacity: 0;
     }
   }
+  .penIcon{
+color: var(--text-black-900);
+  }
 
   .hideText{
 visibility: hidden;
-/* opacity:0; */
+opacity:0;
 position: absolute;
 }
 .showText{
+    opacity: 1;
 visibility: visible;
 }
 
